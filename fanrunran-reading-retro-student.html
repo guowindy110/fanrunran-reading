@@ -80,6 +80,38 @@
 
     <script>
       const retroPacks = {
+        2: {
+          examId: "fanrunran_retro_02_water_lanes",
+          examTitle: "范润然回测卷02 · 威尼斯的小艇与水巷人家",
+          kicker: "学生做题端口 · 第 2 篇",
+          title: "回测卷四：威尼斯的小艇与水巷人家",
+          subtitle: "对比阅读回测：联读课内外材料，重点看信息表、动静描写和跨文本证据。",
+          axes: "A2 对比读法 / A3 信息定位 / A5 动静描写 / A6 证据整合",
+          time: "建议用时：20 分钟",
+          note: "对比阅读 · 动静描写",
+          source: "./fanrunran-reading-output-02-short-video.md",
+          questions: [
+            { title: "一、两城信息表", score: "6 分", stem: "联读两篇文章，完成威尼斯和苏州两座城市的信息。", fields: [
+              ["威尼斯生活画面", "q1_venice_life", "填写 ①②"],
+              ["苏州城市称呼", "q1_suzhou_name", "填写 ③"],
+              ["苏州交通工具", "q1_suzhou_boats", "填写 ④"],
+              ["苏州生活画面", "q1_suzhou_life", "填写 ⑤⑥"]
+            ] },
+            { title: "二、动静描写对比", score: "5 分", stem: "对比船夫和船娘的描写，说明同为动态描写但效果不同。", fields: [
+              ["描写类型", "q2_type", "动态 / 静态"],
+              ["船夫描写效果", "q2_boatman", "表现了什么？"],
+              ["船娘描写效果", "q2_boatwoman", "表现了什么？"],
+              ["朗读语气", "q2_tone", "船夫：__；船娘：__"]
+            ] },
+            { title: "三、理解选择题", score: "2 分", stem: "下面关于两篇文章的理解，不恰当的一项是？", fields: [
+              ["我选择", "q3_choice", "A / B / C / D"],
+              ["排除理由", "q3_reason", "回到两篇文章说明。"]
+            ] },
+            { title: "四、结尾含义理解", score: "2 分", stem: "为什么结尾说“那便是苏州的魂，从未真正离去”？", fields: [
+              ["我的理解", "q4_answer", "联系上下文回答。"]
+            ] }
+          ]
+        },
         8: {
           examId: "fanrunran_retro_08_jiashu",
           examTitle: "范润然回测卷08 · 家书",
@@ -148,15 +180,15 @@
           ]
         },
         10: {
-          examId: "fanrunran_retro_10_literary_combo",
-          examTitle: "范润然回测卷10 · 文体综合回测",
+          examId: "fanrunran_retro_10_yizizhishi",
+          examTitle: "范润然回测卷10 · 一字之师",
           kicker: "学生做题端口 · 第 10 篇",
-          title: "回测卷三 + 四：文体综合回测",
-          subtitle: "文言文 + 课内外对比阅读：检查文体读法、断句翻译、动静描写和对比证据。",
-          axes: "A1 基础语言 / A2 文体读法 / A3 信息定位 / A5 描写推断 / A6 证据整合 / A7 迁移",
-          time: "建议用时：38 分钟，可拆成两次",
-          note: "文言文 + 对比阅读",
-          source: "./fanrunran-reading-output-10-literary-combo.md",
+          title: "回测卷三：一字之师",
+          subtitle: "文言文回测：借注释读大意，检查词义、断句翻译、人物理解和启示迁移。",
+          axes: "A1 基础语言 / A2 文言文读法 / A5 人物理解 / A7 评价迁移",
+          time: "建议用时：18 分钟",
+          note: "文言文 · 一字之师",
+          source: "./fanrunran-reading-output-10-yizizhishi.md",
           questions: [
             { title: "一、《一字之师》词义题", score: "2 分", stem: "“齐己矍然，不觉兼三衣叩地膜拜”中的“兼”字是什么意思？", fields: [
               ["我选择", "q1_choice", "A / B / C / D"],
@@ -173,24 +205,6 @@
             { title: "四、《一字之师》人物与启示", score: "6 分", stem: "齐己是一个怎样的人？你从故事中受到怎样的启示？", fields: [
               ["齐己的人物特点", "q4_trait", "例如：虚心、尊重意见、追求诗艺"],
               ["启示", "q4_lesson", "结合故事讲清道理。"]
-            ] },
-            { title: "五、对比阅读信息表", score: "6 分", stem: "联读《威尼斯的小艇》和《水巷人家》，完成两座城市的信息。", fields: [
-              ["威尼斯生活画面", "q5_venice", "填写 ①②"],
-              ["苏州城市称呼与交通工具", "q5_suzhou_base", "填写 ③④"],
-              ["苏州生活画面", "q5_suzhou_life", "填写 ⑤⑥"]
-            ] },
-            { title: "六、动静描写对比", score: "5 分", stem: "对比船夫和船娘的描写，说明同为动态描写但效果不同。", fields: [
-              ["描写类型", "q6_type", "动态 / 静态"],
-              ["船夫描写效果", "q6_boatman", "表现了什么？"],
-              ["船娘描写效果", "q6_boatwoman", "表现了什么？"],
-              ["朗读语气", "q6_tone", "船夫：__；船娘：__"]
-            ] },
-            { title: "七、理解选择题", score: "2 分", stem: "下面关于两篇文章的理解，不恰当的一项是？", fields: [
-              ["我选择", "q7_choice", "A / B / C / D"],
-              ["排除理由", "q7_reason", "回到两篇文章说明。"]
-            ] },
-            { title: "八、结尾含义理解", score: "2 分", stem: "为什么结尾说“那便是苏州的魂，从未真正离去”？", fields: [
-              ["我的理解", "q8_answer", "联系上下文回答。"]
             ] }
           ]
         }

@@ -40,7 +40,7 @@ git push -u origin main
 ## 部署后能用到什么
 
 - **索引页**：10 天成长花园路径（1-10 篇均已开放）、篇目导航、左侧总控；右侧「完整原稿」在 Pages（http 环境）下能正常加载（本地双击文件时因浏览器限制读不到，Pages 上没这个问题）。
-- **每篇学生页**：阅读材料 + 作答区 + 计时器 + 自动保存（存在浏览器本地）+ 「导出画像输入(JSON)」「导出作答文本」。第 8-10 篇使用通用回测卷学生页，按链接参数加载对应卷子。
+- **每篇学生页**：阅读材料 + 作答区 + 计时器 + 自动保存（存在浏览器本地）+ 「导出画像输入(JSON)」「导出作答文本」。第 2 篇、第 8-10 篇使用通用回测卷学生页，按链接参数加载对应卷子。
 - **每篇助学者解读页**：答案要点、评分点、卡点提示等。
 
 ## 重要：关于“记录学生信息并回流画像”
@@ -57,8 +57,8 @@ git push -u origin main
 |---|---|
 | `index.html` / `fanrunran-10-reading-pack.html` | 索引页（同一内容，入口用 index.html） |
 | `fanrunran-reading-student-0X-*.html`（7） | 第 1–7 篇学生做题页 |
-| `fanrunran-reading-retro-student.html` | 第 8–10 篇回测卷通用学生页 |
-| `fanrunran-reading-retro-review.html` | 第 8–10 篇回测卷通用助学者解读页 |
+| `fanrunran-reading-retro-student.html` | 第 2、8–10 篇回测卷通用学生页 |
+| `fanrunran-reading-retro-review.html` | 第 2、8–10 篇回测卷通用助学者解读页 |
 | `fanrunran-reading-review-0X-*.html`（7） | 第 1–7 篇助学者解读页 |
 | `fanrunran-reading-output-0X-*.md`（10） | 第 1–10 篇完整原稿（索引页右栏读取） |
 | `fanrunran-reading-page.css` | 每日页样式（童趣花园） |
@@ -67,4 +67,4 @@ git push -u origin main
 | `fanrunran-self-selected-reading-kit.md` | 选材工作台规则 |
 | `.nojekyll` | 关掉 Jekyll 处理 |
 
-> 第 8–10 篇已补为期末回测卷：第 8 篇《家书》，第 9 篇《人民英雄纪念碑的设计智慧》，第 10 篇为《一字之师》与《威尼斯的小艇》《水巷人家》的文体综合回测。
+> 第 2 篇已由短视频材料替换为回测卷四《威尼斯的小艇》《水巷人家》；第 8 篇为《家书》，第 9 篇为《人民英雄纪念碑的设计智慧》，第 10 篇为回测卷三《一字之师》。
