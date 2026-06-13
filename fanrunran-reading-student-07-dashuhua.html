@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>范润然阅读题 07 · 打树花 · 学生端</title>
+    <link rel="stylesheet" href="./fanrunran-reading-page.css" />
+  </head>
+  <body data-exam-id="fanrunran_dashuhua_07" data-exam-title="范润然阅读题07 · 打树花">
+    <main class="page">
+      <header class="top-card">
+        <div>
+          <p class="kicker">学生做题端口 · 第 7 篇</p>
+          <h1>打树花</h1>
+          <p class="subtitle">阅读左页材料，完成右页 5 道题。请重点观察：作者怎样把“壮观场面、勇敢人物、民俗智慧”写到一起。</p>
+        </div>
+
+        <aside class="mode-panel" aria-label="本页用途">
+          <strong>只给学生作答</strong>
+          <span>A4 场面过程 / A5 人物形象 / A6 描写证据</span>
+          <span>建议用时：30-40 分钟</span>
+        </aside>
+
+        <div class="toolbar" aria-label="作答工具">
+          <span class="status" id="saveStatus">尚未开始作答。</span>
+          <div class="timer-panel" aria-label="计时器">
+            <span class="timer-display" id="timerDisplay">00:00:00</span>
+            <button type="button" class="primary" id="timerStartBtn">开始计时</button>
+            <button type="button" id="timerPauseBtn">暂停</button>
+            <button type="button" id="timerResetBtn">重置</button>
+          </div>
+          <div class="actions" aria-label="导出与页面切换">
+            <button type="button" id="exportJsonBtn">导出画像输入</button>
+            <button type="button" id="exportTxtBtn">导出作答文本</button>
+            <button type="button" data-print-page>打印</button>
+            <button type="button" id="clearBtn">清空</button>
+            <a class="button-link" href="./fanrunran-reading-review-07-dashuhua.html">助学者解读</a>
+            <a class="button-link" href="./fanrunran-10-reading-pack.html">10篇总控</a>
+          </div>
+        </div>
+      </header>
+
+      <form id="examForm" autocomplete="off">
+        <section class="meta-grid" aria-label="学生信息">
+          <label>姓名
+            <input type="text" name="student_name" value="范润然" />
+          </label>
+          <label>年级
+            <input type="text" name="grade" value="五年级" />
+          </label>
+          <label>年龄
+            <input type="number" name="age" min="6" max="18" placeholder="例如：11" />
+          </label>
+          <label>日期
+            <input type="text" name="exam_date" placeholder="例如：2026-06-12" />
+          </label>
+        </section>
+
+        <section class="book-spread" aria-label="阅读材料与题目">
+          <article class="book-page reading-page">
+            <div class="section-head">
+              <h2>阅读材料</h2>
+              <span class="small-note">民俗场景散文</span>
+            </div>
+
+            <div class="article">
+              <h2 class="article-title">打树花</h2>
+              <p class="source">冯骥才</p>
+              <p>门前广场上临时拉了一些电灯，将堡门下半截依稀照亮，上半截堡门和高高在上的门楼混在如墨的夜色里。一个正在熔化铁水的大炉子起劲地烧着。鼓风机使炉顶和炉门不停地吐着夺目的火舌。这火舌在每个人眼睛里灼灼发亮，人们——当然包括我，都是来看打树花的。</p>
+              <p>几个虎背熊腰的大汉走上来，人们沸腾了。这便是打树花的汉子。他们的服装有些奇异，头扣草帽，身穿老羊皮袄，毛面朝外，腰扎粗绳，脚遮布帘，走起来又笨重又威风，好像古代的勇士。不久，人群静下来。一张小八仙桌摆在炉前，桌上放粗陶小碗，内盛粗沙，插着三炷香，还有几大碟，三个馍馍三碗菜。好汉们上来点香，烧黄纸，祭炉。</p>
+              <p>仪式过后，撤去供案，开炉放铁水。照眼的铁水被倾入一个方形的火砖煲中。铁水盛满，便被两个大汉快速抬到广场中央。同时拿上来一个大铁桶，水里泡放着十几个长柄勺子，先是其中一个大汉走上去从铁桶中拿起一个勺子，走到火红的铁水前，弯腰一舀，跟着甩腰抡臂，将满满一勺明亮的铁水泼在城墙上。就在这一瞬，好似天崩地裂，呈现出任何地方都不会见到的极其灿烂的奇观！金红的铁水泼击墙面，四外飞溅，就像整个城墙被炸开那样，整个堡门连同上边的门楼子都被照亮。由于铁硬墙坚，铁花飞得又高又远，铺天盖地，然后如同细密的光雨闪闪烁烁由天而降。可是不等这光雨落下，打树花的大汉又把第二勺铁水泼上去。一片冲天的火炮轰上去，一片漫天的光雨落下来，接续不断，每个大汉泼七八下后走下去，跟着另一位大汉上阵来。</p>
+              <p>每个汉子的经验和功夫不同，各有绝招，又互不示弱，渐渐就较上劲儿了。只要一较劲儿，打树花就更好看了。众人眼尖，不久就看出一位年纪大的汉子，身材短粗敦实，泼铁水时腰板像硬橡胶，一舀一舀泼起来又快又猛又有韵律，铁水泼得高，散的面广，而且正好绕过城门洞，铁花升腾时如在头上张开一棵辉煌又奇幻的大树。每每泼完铁水走下来时，身后边的光雨哗哗地落着，映衬着他粗健的身影，好像枪林弹雨中一个无畏的勇士。他的装束也很有特色。别人头上的草帽都是有檐的，为了防止铁水迸到脸上，唯有他戴的是一顶无檐的小毡帽，更显出他的勇气。</p>
+              <p>据当地人说，这汉子是北官堡中打树花的“武状元”，今年61岁，名叫王全，平日在内蒙古打工，年年回来过年时，都要在灯节里给乡亲们演一场打树花。</p>
+              <p>正如很多民俗一样，打树花源于何时，谁也不知，只知道世界上唯有中国有。</p>
+              <p>经过漫长岁月的酿造，民俗方可形成。比如最初打树花用的只是铁水，后来发现铁水的“花”是红色的，铜水的“花”是绿色的，铝水的“花”是白色的，渐渐就在炉中加些铜，又放些铝，打起的树花便五彩缤纷，愈来愈美丽。再比如他们使用的勺子是柳木的，民间说柳木生在河边，属阴，天生避火。但硬拿柳木去舀铁水也不行，这铁水温度高达1300摄氏度呢。人们便把柳木勺子泡在水桶里，通常要泡上一天一夜，而且打树花时每个汉子拿它用上七八下，就得赶紧再放到木桶里浸泡。湿柳木勺子的优点是，铁水在里边滑溜溜的，倒像是油，不单省力气，而且得劲儿，可以泼得又高又远。</p>
+              <p class="source">木笙选自《冯骥才散文》</p>
+            </div>
+          </article>
+
+          <section class="book-page questions-page">
+            <div class="section-head">
+              <h2>作答区</h2>
+              <span class="small-note">4 道主题题 + 1 道复盘题</span>
+            </div>
+
+            <div class="question-list">
+              <section class="question">
+                <div class="question-head">
+                  <h3>一、过程梳理题</h3>
+                  <span class="score">3 分</span>
+                </div>
+                <p class="stem">请根据原文，把“打树花”的现场过程按顺序补完整。</p>
+                <div class="subparts">
+                  <label>大汉登场时的穿着
+                    <textarea class="answer-box short" name="q1_clothes" placeholder="他们头扣……身穿……腰扎……脚遮……"></textarea>
+                  </label>
+                  <label>表演前的仪式
+                    <textarea class="answer-box short" name="q1_ritual" placeholder="他们先……"></textarea>
+                  </label>
+                  <label>泼铁水的关键动作
+                    <textarea class="answer-box short" name="q1_actions" placeholder="弯腰……甩腰……抡臂……"></textarea>
+                  </label>
+                  <label>铁水泼墙后形成的景象
+                    <textarea class="answer-box short" name="q1_scene" placeholder="形成了……"></textarea>
+                  </label>
+                  <label>作者最后补充了哪些民俗技艺？
+                    <textarea class="answer-box" name="q1_folk_skill" placeholder="例如来源、花色变化、柳木勺……"></textarea>
+                  </label>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head">
+                  <h3>二、场面描写赏析</h3>
+                  <span class="score">3 分</span>
+                </div>
+                <p class="stem">请从下面两组句子中任选两处，说明它们写出了打树花怎样的特点。</p>
+                <p class="callout">A. “就在这一瞬，好似天崩地裂。”<br />B. “金红的铁水泼击墙面，四外飞溅。”<br />C. “如同细密的光雨闪闪烁烁由天而降。”<br />D. “铁花升腾时如在头上张开一棵辉煌又奇幻的大树。”</p>
+                <div class="chain-grid">
+                  <label>我选择的句子
+                    <textarea class="answer-box short" name="q2_choices" placeholder="我选择……和……"></textarea>
+                  </label>
+                  <label>第一处描写的作用
+                    <textarea class="answer-box short" name="q2_explain_1" placeholder="它运用了……写出了……"></textarea>
+                  </label>
+                  <label>第二处描写的作用
+                    <textarea class="answer-box short" name="q2_explain_2" placeholder="它运用了……写出了……"></textarea>
+                  </label>
+                  <label>共同特点
+                    <textarea class="answer-box short" name="q2_common" placeholder="共同表现了打树花……"></textarea>
+                  </label>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head">
+                  <h3>三、人物形象题</h3>
+                  <span class="score">3 分</span>
+                </div>
+                <p class="stem">文章为什么说王全像“枪林弹雨中一个无畏的勇士”？请至少用三处原文证据说明王全是一个怎样的人。</p>
+                <div class="subparts">
+                  <label>我概括王全的特点
+                    <textarea class="answer-box short" name="q3_traits" placeholder="王全是一个……的人。"></textarea>
+                  </label>
+                  <div class="evidence-row">
+                    <label>原文证据 1
+                      <textarea class="answer-box short" name="q3_evidence_1" placeholder="证据一……"></textarea>
+                    </label>
+                    <label>它证明了什么？
+                      <textarea class="answer-box short" name="q3_explain_1" placeholder="证明他……"></textarea>
+                    </label>
+                  </div>
+                  <div class="evidence-row">
+                    <label>原文证据 2
+                      <textarea class="answer-box short" name="q3_evidence_2" placeholder="证据二……"></textarea>
+                    </label>
+                    <label>它证明了什么？
+                      <textarea class="answer-box short" name="q3_explain_2" placeholder="证明他……"></textarea>
+                    </label>
+                  </div>
+                  <div class="evidence-row">
+                    <label>原文证据 3
+                      <textarea class="answer-box short" name="q3_evidence_3" placeholder="证据三……"></textarea>
+                    </label>
+                    <label>它证明了什么？
+                      <textarea class="answer-box short" name="q3_explain_3" placeholder="证明他……"></textarea>
+                    </label>
+                  </div>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head">
+                  <h3>四、民俗价值评价题</h3>
+                  <span class="score">2 分</span>
+                </div>
+                <p class="stem">文章后半部分写了打树花的来历、花色变化、柳木勺泡水等内容。有人说：“这些知识和前面的壮观场面关系不大，可以删掉。”你同意吗？请根据原文回答。</p>
+                <div class="subparts">
+                  <label>我的观点
+                    <textarea class="answer-box short" name="q4_view" placeholder="我同意 / 不同意，因为……"></textarea>
+                  </label>
+                  <div class="evidence-row">
+                    <label>后半部分证据 1
+                      <textarea class="answer-box short" name="q4_evidence_1" placeholder="请写原文依据。"></textarea>
+                    </label>
+                    <label>它帮助我理解了什么？
+                      <textarea class="answer-box short" name="q4_explain_1" placeholder="它说明……"></textarea>
+                    </label>
+                  </div>
+                  <div class="evidence-row">
+                    <label>后半部分证据 2
+                      <textarea class="answer-box short" name="q4_evidence_2" placeholder="请写原文依据。"></textarea>
+                    </label>
+                    <label>它帮助我理解了什么？
+                      <textarea class="answer-box short" name="q4_explain_2" placeholder="它说明……"></textarea>
+                    </label>
+                  </div>
+                  <label>我对打树花民俗价值的理解
+                    <textarea class="answer-box" name="q4_value" placeholder="这些内容让我明白……"></textarea>
+                  </label>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head">
+                  <h3>五、A8 复盘题</h3>
+                  <span class="score">不计主分</span>
+                </div>
+                <p class="stem">这篇文章很容易让人只写“壮观、好看”。你做题时怎样避免空泛？</p>
+                <div class="subparts">
+                  <label>我先要梳理的顺序是
+                    <textarea class="answer-box short" name="q5_order" placeholder="准备 -> ……"></textarea>
+                  </label>
+                  <label>我会重点圈出的动作词有
+                    <textarea class="answer-box short" name="q5_verbs" placeholder="例如：舀、甩腰……"></textarea>
+                  </label>
+                  <label>我会找出的描写句有
+                    <textarea class="answer-box short" name="q5_description" placeholder="例如：天崩地裂、光雨……"></textarea>
+                  </label>
+                  <label>我评价人物或民俗时，必须补上
+                    <textarea class="answer-box short" name="q5_evidence_strategy" placeholder="必须补上……"></textarea>
+                  </label>
+                  <label>下次读场面描写文章，我要先问自己
+                    <textarea class="answer-box short" name="q5_next_question" placeholder="我要先问自己……"></textarea>
+                  </label>
+                </div>
+              </section>
+            </div>
+          </section>
+        </section>
+      </form>
+
+      <p class="footer-note">学生端只用于独立作答。导出的 JSON 可交给助学者进行批改与画像回流。</p>
+    </main>
+
+    <script src="./fanrunran-reading-page.js"></script>
+  </body>
+</html>

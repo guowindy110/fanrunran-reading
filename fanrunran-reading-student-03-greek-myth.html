@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>范润然阅读题 03 · 为什么读古希腊神话 · 学生端</title>
+    <link rel="stylesheet" href="./fanrunran-reading-page.css" />
+  </head>
+  <body data-exam-id="fanrunran_greek_myth_03" data-exam-title="范润然阅读题03 · 为什么读古希腊神话">
+    <main class="page">
+      <header class="top-card">
+        <div>
+          <p class="kicker">学生做题端口 · 第 3 篇</p>
+          <h1>为什么读古希腊神话？</h1>
+          <p class="subtitle">阅读左页材料，完成右页 5 道题。请重点观察：作者不是在列神话故事，而是在说明神话怎样照见今天的人。</p>
+        </div>
+        <aside class="mode-panel" aria-label="本页用途">
+          <strong>只给学生作答</strong>
+          <span>A4 篇章整合 / A6 多证据 / A7 评价迁移</span>
+          <span>建议用时：35-45 分钟</span>
+        </aside>
+        <div class="toolbar" aria-label="作答工具">
+          <span class="status" id="saveStatus">尚未开始作答。</span>
+          <div class="timer-panel" aria-label="计时器">
+            <span class="timer-display" id="timerDisplay">00:00:00</span>
+            <button type="button" class="primary" id="timerStartBtn">开始计时</button>
+            <button type="button" id="timerPauseBtn">暂停</button>
+            <button type="button" id="timerResetBtn">重置</button>
+          </div>
+          <div class="actions" aria-label="导出与页面切换">
+            <button type="button" id="exportJsonBtn">导出画像输入</button>
+            <button type="button" id="exportTxtBtn">导出作答文本</button>
+            <button type="button" data-print-page>打印</button>
+            <button type="button" id="clearBtn">清空</button>
+            <a class="button-link" href="./fanrunran-reading-review-03-greek-myth.html">助学者解读</a>
+            <a class="button-link" href="./fanrunran-10-reading-pack.html">10篇总控</a>
+          </div>
+        </div>
+      </header>
+
+      <form id="examForm" autocomplete="off">
+        <section class="meta-grid" aria-label="学生信息">
+          <label>姓名<input type="text" name="student_name" value="范润然" /></label>
+          <label>年级<input type="text" name="grade" value="五年级" /></label>
+          <label>年龄<input type="number" name="age" min="6" max="18" placeholder="例如：11" /></label>
+          <label>日期<input type="text" name="exam_date" placeholder="例如：2026-06-11" /></label>
+        </section>
+
+        <section class="book-spread" aria-label="阅读材料与题目">
+          <article class="book-page reading-page">
+            <div class="section-head"><h2>阅读材料</h2><span class="small-note">议论性散文 / 例子很多</span></div>
+            <div class="article">
+              <h2 class="article-title">为什么读古希腊神话？</h2>
+              <p class="source">陈赛</p>
+              <p>在世界各地的神话中，我一直偏爱古希腊神话，不仅因为它们狂野奇特，也因为它们最富有明媚的生活气息。大海为什么咆哮？那是海神波塞冬在发怒。清晨为什么有露珠？那是一位母亲悲伤的眼泪。水仙花为什么开在水边？那是一个美少年迷恋自己水中的倒影。孔雀的尾巴上为什么有那么多眼状斑纹？那是天后赫拉纪念一位忠诚的仆人。蜘蛛为什么织网？它曾经是纺织技艺比肩智慧女神雅典娜的天才少女。</p>
+              <p>在 3000 多年前的古希腊人眼中，神无处不在。神对人间事务的积极参与，甚至体现在人类的一思一行之间。你突然对某人产生强烈的爱慕之情，可能是爱神阿佛洛狄忒的恶作剧。你写作时突然灵思泉涌，也许是得到了缪斯女神的帮助。你的家中窗明几净、秩序井然，没准是宙斯的影响所致。</p>
+              <p>古希腊神话中，神并不总是善的存在。猎人阿克泰翁误闯狩猎女神阿尔忒弥斯沐浴的地方，被盛怒之下的女神变成了一头鹿，随即又被自己的猎犬撕成了碎片。类似的故事中国也有，但结局完全不同。作为来自异质文化的读者，我们一方面倾慕狩猎女神的力量，另一方面也震惊于她的冷酷和暴力。</p>
+              <p>古希腊神话读多了，你会发现，比起道德的楷模，这些神更像是无所不能、长生不老的三岁小孩：任性妄为，只顾自己的欲望，一旦受挫或被激怒就会大肆破坏。他们所代表的，是一个暴力、不可预知、从根本上来说并不公正的世界。</p>
+              <p>3000 多年过去了，科学昌明，诸神隐退，但这个世界发生了多大的变化呢？</p>
+              <p>神秘的疾病仍然会肆虐城市，战争、洪水和大火仍然会毁灭家园，法律仍然可能与正义相悖。世界上有的是手足相残、朋友反目，有的是被命运撕裂的可怜人，有的是无法认清自己的聪明人，也有的是因为悲伤而变得疯狂的母亲。伊卡洛斯的坠落、法厄同的翻车，就像是写给今天的气候灾难、人工智能的寓言。那喀索斯仍然活在今天每一个拿着手机自拍的年轻人心中。人们的心依然每天在渴望与不安中穿行，就像奥德修斯航行在地中海诡谲的海面上。</p>
+              <p>为什么说神话是一面镜子？</p>
+              <p>因为我们在其中照见了自己的样子。</p>
+              <p>作为西方文明的源头，《伊利亚特》和《奥德赛》这两部史诗中包含了西方人面对世界与自身的各种重大问题的讨论，关于生、关于死、关于爱、关于美、关于命运、关于身份、关于战争的合法性与道德的两难。在这一期专题里，我们不妨借这面异域的镜子，来照一照自己的心灵。如果你是帕里斯，你会把金苹果给谁？如果你是阿喀琉斯，你会怎么选择？是战死沙场的辉煌声名，还是漫长平庸的一生？如果你是卡珊德拉，你怎么面对自己被诅咒的天赋和命运？如果你是奥德修斯，你会选择留在无忧岛享受永恒的生命，还是历经艰辛、九死一生，也要返回人间的家园？</p>
+              <p class="source">素材来源：用户提供文章《为什么读古希腊神话？》</p>
+            </div>
+          </article>
+
+          <section class="book-page questions-page">
+            <div class="section-head"><h2>作答区</h2><span class="small-note">4 道主题题 + 1 道复盘题</span></div>
+            <div class="question-list">
+              <section class="question">
+                <div class="question-head"><h3>一、信息定位与结构识别</h3><span class="score">3 分</span></div>
+                <p class="stem">请根据原文回答下面四个问题。</p>
+                <div class="subparts">
+                  <label>作者一开始说自己为什么偏爱古希腊神话？<textarea class="answer-box short" name="q1_reason"></textarea></label>
+                  <label>作者后来发现古希腊神并不总是怎样的存在？<textarea class="answer-box short" name="q1_gods"></textarea></label>
+                  <label>作者为什么说 3000 多年后，神话仍然和今天有关？<textarea class="answer-box short" name="q1_today"></textarea></label>
+                  <label>“神话是一面镜子”，这面镜子照见了什么？<textarea class="answer-box short" name="q1_mirror"></textarea></label>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head"><h3>二、篇章主线整合</h3><span class="score">3 分</span></div>
+                <p class="stem">请把文章的论证链补完整。</p>
+                <div class="chain-grid">
+                  <label>古希腊神话狂野奇特，也有明媚生活气息 -> 古希腊人相信神<textarea class="answer-box short" name="q2_step_1"></textarea></label>
+                  <label>但这些神并不总是<textarea class="answer-box short" name="q2_step_2"></textarea></label>
+                  <label>他们代表了一个<textarea class="answer-box short" name="q2_step_3"></textarea></label>
+                  <label>3000 多年后，现代世界仍然有<textarea class="answer-box short" name="q2_step_4"></textarea></label>
+                  <label>所以神话像一面镜子，让我们<textarea class="answer-box short" name="q2_step_5"></textarea></label>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head"><h3>三、核心证据题</h3><span class="score">3 分</span></div>
+                <p class="stem">作者为什么说“神话是一面镜子”？下面四组证据中，哪两组最能支持这个观点？哪一组主要是在说明“生活气息”，不能直接证明“镜子”？</p>
+                <p class="callout">A. 大海咆哮是波塞冬发怒，露珠是母亲悲伤的眼泪，水仙花来自少年迷恋倒影。<br />B. 古希腊神并不总是善的，他们任性、冷酷，代表暴力、不可预知、不公正的世界。<br />C. 疾病、战争、洪水、大火、法律与正义相悖等问题，今天仍然存在。<br />D. 《伊利亚特》和《奥德赛》讨论生、死、爱、美、命运、身份、战争等重大问题。</p>
+                <label>我认为最能支持“神话是一面镜子”的证据是<textarea class="answer-box short" name="q3_core"></textarea></label>
+                <label>它们分别证明了什么？<textarea class="answer-box" name="q3_explain"></textarea></label>
+                <label>主要说明“生活气息”的证据是<textarea class="answer-box short" name="q3_life"></textarea></label>
+              </section>
+
+              <section class="question">
+                <div class="question-head"><h3>四、评价迁移题</h3><span class="score">2 分</span></div>
+                <p class="stem">如果有同学说：“古希腊神话太古老了，和我们现在的生活没有关系。”你同意吗？请根据原文回答。</p>
+                <label>我的观点和理由<textarea class="answer-box" name="q4_view"></textarea></label>
+                <div class="evidence-row">
+                  <label>原文证据 1<textarea class="answer-box short" name="q4_evidence_1"></textarea></label>
+                  <label>原文证据 2<textarea class="answer-box short" name="q4_evidence_2"></textarea></label>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head"><h3>五、A8 复盘题</h3><span class="score">不计主分</span></div>
+                <p class="stem">这篇文章例子很多。你做题时是怎么防止自己被神话名字带跑的？</p>
+                <div class="subparts">
+                  <label>我先找出的中心句是<textarea class="answer-box short" name="q5_center"></textarea></label>
+                  <label>我把例子分成了几类<textarea class="answer-box short" name="q5_categories"></textarea></label>
+                  <label>我认为最重要的一类例子是<textarea class="answer-box short" name="q5_best"></textarea></label>
+                  <label>下次读例子很多的文章，我要先问自己<textarea class="answer-box short" name="q5_strategy"></textarea></label>
+                </div>
+              </section>
+            </div>
+          </section>
+        </section>
+      </form>
+      <p class="footer-note">学生端只用于独立作答。导出的 JSON 可交给助学者进行批改与画像回流。</p>
+    </main>
+    <script src="./fanrunran-reading-page.js"></script>
+  </body>
+</html>

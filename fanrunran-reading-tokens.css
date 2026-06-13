@@ -1,0 +1,95 @@
+/* ============================================================================
+ * 范润然 10 天阅读包 · 童趣设计 token 层（自然花园系）
+ * ----------------------------------------------------------------------------
+ * 独立自包含（不依赖 React 工程的 src/design），供 public/ 下的标准 HTML 共用：
+ *   · fanrunran-10-reading-pack.html（索引 / 成长花园路径）
+ *   · fanrunran-reading-page.css（每日阅读/答题/复盘页）
+ *
+ * 与主工程同一套视觉语言：暖底默认（这些页面天生面向孩子，无需主题切换）。
+ * 组件只消费语义 token（--color-* / --radius-* …），不写裸 hex。
+ * ========================================================================== */
+
+:root {
+  /* ── primitive 色阶 ── */
+  --leaf-50:#eef6f1; --leaf-100:#d9ece1; --leaf-200:#b3d8c5; --leaf-300:#82bf9d;
+  --leaf-400:#4f9d74; --leaf-500:#347b61; --leaf-600:#25634c; --leaf-700:#165c45;
+  --leaf-800:#11402f; --leaf-soft:#e3f1ea;
+  --sun-50:#fff8ec; --sun-100:#fdeecb; --sun-200:#f9dd9a; --sun-300:#f2c75f;
+  --sun-400:#e8a93a; --sun-500:#d8901f; --sun-600:#b7791f; --sun-700:#8a5a14;
+  --blossom-50:#fff1f0; --blossom-100:#ffdfdc; --blossom-200:#ffc2bb;
+  --blossom-300:#f99d92; --blossom-400:#ef7568; --blossom-500:#db5446;
+  --clay-600:#9f4a3a;
+  --sky-50:#eef6fb; --sky-100:#d6eaf6; --sky-200:#aed5ec; --sky-300:#79b9dd; --sky-400:#4f9ccb;
+  --bark-900:#3a2a16; --bark-800:#463424; --bark-700:#6a3e0e; --bark-500:#8b6a3f; --bark-300:#a48457;
+  --cream-50:#fffdf8; --cream-100:#f7f4ec; --cream-200:#f4f1ea; --cream-300:#e9e4d6;
+  --ink-900:#24312b; --grey-500:#6a746d; --grey-300:#dfe5dc;
+
+  /* ── semantic（暖花园基调，组件层只用这些） ── */
+  --color-bg:            var(--sun-50);
+  --color-surface:       #fffefb;
+  --color-surface-soft:  var(--leaf-50);
+  --color-surface-warm:  var(--sun-100);
+  --color-border:        #f1e2c4;
+  --color-border-soft:   #f5ecd8;
+
+  --color-text:          var(--bark-800);
+  --color-text-muted:    var(--bark-500);
+  --color-text-on-brand: #ffffff;
+  --color-heading:       var(--leaf-700);
+
+  --color-brand:         var(--leaf-500);
+  --color-brand-strong:  var(--leaf-700);
+  --color-brand-soft:    var(--leaf-100);
+
+  --color-secondary:        var(--sun-300);
+  --color-secondary-strong: var(--sun-600);
+  --color-secondary-soft:   var(--sun-100);
+
+  --color-celebrate:     var(--blossom-400);
+  --color-celebrate-soft:var(--blossom-100);
+  --color-info:          var(--sky-400);
+  --color-info-soft:     var(--sky-100);
+  --color-alert:         var(--clay-600);
+  --color-alert-soft:    var(--blossom-50);
+
+  /* 成长花园（10 天路径 + 植物） */
+  --color-soil:          var(--bark-700);
+  --color-water:         var(--sky-300);
+  --color-sun-ray:       var(--sun-300);
+  --color-plant-seed:    var(--bark-500);
+  --color-plant-sprout:  var(--leaf-300);
+  --color-plant-grow:    var(--leaf-500);
+  --color-plant-bloom:   var(--blossom-400);
+
+  /* ── 字体 ── */
+  --font-sans:  "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  --font-round: "Quicksand", "Varela Round", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-mono:  ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* ── 圆角（童趣＝更圆） ── */
+  --radius-xs:6px; --radius-sm:8px; --radius-md:12px; --radius-lg:18px;
+  --radius-xl:26px; --radius-pill:999px;
+
+  /* ── 间距 ── */
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px;
+  --space-5:20px; --space-6:24px; --space-8:32px;
+
+  /* ── 阴影 ── */
+  --shadow-sm:0 2px 8px rgba(120,90,40,0.08);
+  --shadow-md:0 16px 40px rgba(150,110,50,0.12);
+  --shadow-lg:0 24px 56px rgba(150,110,50,0.18);
+  --shadow-warm:0 8px 24px rgba(183,121,31,0.12);
+
+  /* ── 动效 ── */
+  --dur-fast:150ms; --dur:250ms; --dur-slow:400ms;
+  --ease-out:cubic-bezier(0.22,1,0.36,1);
+  --ease-bounce:cubic-bezier(0.34,1.56,0.64,1);
+
+  /* ── 吉祥物占位 ── */
+  --mascot-body:var(--leaf-400); --mascot-belly:var(--leaf-100);
+  --mascot-cheek:var(--blossom-300); --mascot-leaf:var(--leaf-500);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast:0ms; --dur:0ms; --dur-slow:0ms; }
+}

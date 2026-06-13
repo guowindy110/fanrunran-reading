@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>范润然阅读题 04 · 一粒麦子的旅行 · 学生端</title>
+    <link rel="stylesheet" href="./fanrunran-reading-page.css" />
+  </head>
+  <body data-exam-id="fanrunran_wheat_04" data-exam-title="范润然阅读题04 · 一粒麦子的旅行">
+    <main class="page">
+      <header class="top-card">
+        <div>
+          <p class="kicker">学生做题端口 · 第 4 篇</p>
+          <h1>一粒麦子的旅行</h1>
+          <p class="subtitle">阅读左页材料，完成右页 5 道题。请重点观察：小麦的路线怎样串起不同地区的饮食、生活和文化。</p>
+        </div>
+
+        <aside class="mode-panel" aria-label="本页用途">
+          <strong>只给学生作答</strong>
+          <span>A4 路线主线 / A6 文化证据</span>
+          <span>建议用时：25-35 分钟</span>
+        </aside>
+
+        <div class="toolbar" aria-label="作答工具">
+          <span class="status" id="saveStatus">尚未开始作答。</span>
+          <div class="timer-panel" aria-label="计时器">
+            <span class="timer-display" id="timerDisplay">00:00:00</span>
+            <button type="button" class="primary" id="timerStartBtn">开始计时</button>
+            <button type="button" id="timerPauseBtn">暂停</button>
+            <button type="button" id="timerResetBtn">重置</button>
+          </div>
+          <div class="actions" aria-label="导出与页面切换">
+            <button type="button" id="exportJsonBtn">导出画像输入</button>
+            <button type="button" id="exportTxtBtn">导出作答文本</button>
+            <button type="button" data-print-page>打印</button>
+            <button type="button" id="clearBtn">清空</button>
+            <a class="button-link" href="./fanrunran-reading-review-04-wheat.html">助学者解读</a>
+            <a class="button-link" href="./fanrunran-10-reading-pack.html">10篇总控</a>
+          </div>
+        </div>
+      </header>
+
+      <form id="examForm" autocomplete="off">
+        <section class="meta-grid" aria-label="学生信息">
+          <label>姓名
+            <input type="text" name="student_name" value="范润然" />
+          </label>
+          <label>年级
+            <input type="text" name="grade" value="五年级" />
+          </label>
+          <label>年龄
+            <input type="number" name="age" min="6" max="18" placeholder="例如：11" />
+          </label>
+          <label>日期
+            <input type="text" name="exam_date" placeholder="例如：2026-06-11" />
+          </label>
+        </section>
+
+        <section class="book-spread" aria-label="阅读材料与题目">
+          <article class="book-page reading-page">
+            <div class="section-head">
+              <h2>阅读材料</h2>
+              <span class="small-note">说明性散文 / 路线材料</span>
+            </div>
+
+            <div class="article">
+              <h2 class="article-title">一粒麦子的旅行</h2>
+              <p class="source">谁最中国</p>
+              <p>六月几场热风把麦子吹熟了，成熟的麦穗颗粒饱满，胀胀鼓鼓的像要爆裂开来。作为养育世界人民的三大主食之一，麦子和人类一样，从未停下过迁移的脚步。</p>
+              <p>大约一万多年前，世界上第一粒麦子在两河流域肥沃的土地上生根发芽、开花灌浆。一阵风吹来，麦子一路向东，翻过伊朗高原来到了中国。</p>
+              <p>从中国向西，爬过高加索山脉，麦子到了欧洲，最后一路南下到达北非。在漫长的岁月里，小小的麦子在不同的土地上流转、生长、碰撞，不仅造就了绚烂多彩的饮食风貌，还将浓郁的香气和温暖带进了世人的生命。</p>
+              <p>麦子旅行的起点，是一片夹在海洋与海洋、山脉与沙漠、盐沼与湖泊之间的沃土。六月正值麦收时节，一眼望去，大片大片金黄的麦穗在风中轻轻晃动。这里的小麦有着悠久的历史，山坡上至今仍遍布着最古老的小麦品种。</p>
+              <p>在伊朗西部古城克尔曼沙阿，拉文什是一种当地人离不开的主食。每天，克尔曼沙阿街头的作坊里，一张接一张、一摞又一摞地生产着这种薄如纸片的面饼。</p>
+              <p>在伊朗人的餐桌上，拉文什可以“席卷”你喜爱的一切食物。小麦的这份包容，还体现在另一种面食桑嘎面包上。“桑嘎”在波斯语里是小石子的意思，所以，长达半米的桑嘎面包也叫石子烤馕。</p>
+              <p>大约 4500 年前，勇敢的小麦翻越了帕米尔高原、天山山脉，来到塔里木盆地，成了印有花纹的馕饼。在新疆，各式各样的馕与伊朗的桑嘎面包一样，贯穿了当地人的生活。</p>
+              <p>烤馕不是一件容易的事，需要和面、配料、造型、预热馕坑、打馕等多个步骤。因地域和习惯不同，有的馕擀制成面饼，有的则盘成半球状的面团，也有直接拉拽成长面片的。</p>
+              <p>馕不仅在新疆人的生活中占据着重要地位，还有着深刻的文化意蕴。馕在维吾尔文化里有平安、团圆、吉祥之意，远行的人吃一口家里的馕能够减轻乡愁，喜庆的日子吃一口馕能够增添欢乐。</p>
+              <p>沿着塔克拉玛干沙漠两侧的绿洲通道，一路向东依次是河西走廊、关中平原和黄土高原。</p>
+              <p>在关中平原，勤劳的农人常把轻微发酵的面饼摊在烧烫的鹅卵石上，再用同样滚烫的石子覆盖。刚出锅的石子馍烙印着一个个褐色的环形山，散发着令人愉悦的麦香，这香气和关中人的性格一样，淳厚朴实。</p>
+              <p>继续向东，来到淮中平原，小麦遇见了擅长使用大锅蒸大馍的阜阳人。安徽阜阳的馒头最大的能达到 6 斤重，看起来像一个紧实柔软的大枕头。酥软洁白的馍瓣层层相包，蘸上一口咸香的酱豆，是阜阳人舌尖上最难忘的记忆。</p>
+              <p>小麦的到来，不仅奠定了中国“南稻北麦”的饮食格局，也几乎改变了全人类的饮食格局。对小麦来说，这是一场漫长、壮美、惊心动魄又充满互动性的旅程。</p>
+              <p>神奇的小麦在山海之间不断行走，又在不同的土地上生根发芽、碰撞交融。在人类文明发展的进程中，小麦与人们共同发酵的馨香，串联起了人类的生命与生活，守护着我们的世界。</p>
+              <p class="source">素材来源：用户提供 Obsidian 文档《谁最中国-一粒麦子的旅行》</p>
+            </div>
+          </article>
+
+          <section class="book-page questions-page">
+            <div class="section-head">
+              <h2>作答区</h2>
+              <span class="small-note">4 道主题题 + 1 道复盘题</span>
+            </div>
+
+            <div class="question-list">
+              <section class="question">
+                <div class="question-head">
+                  <h3>一、路线定位题</h3>
+                  <span class="score">3 分</span>
+                </div>
+                <p class="stem">请根据原文，按顺序写出小麦旅行中出现的几个关键地点或区域，并写出其中两个地方对应的面食。</p>
+                <div class="chain-grid">
+                  <label>两河流域 -> 
+                    <textarea class="answer-box short" name="q1_route_1" placeholder="接下来到哪里？"></textarea>
+                  </label>
+                  <label>中国/塔里木盆地 -> 
+                    <textarea class="answer-box short" name="q1_route_2" placeholder="继续向东经过哪些地方？"></textarea>
+                  </label>
+                  <label>关中平原 -> 
+                    <textarea class="answer-box short" name="q1_route_3" placeholder="最后写到哪里？"></textarea>
+                  </label>
+                  <label>两个地点和面食对应
+                    <textarea class="answer-box short" name="q1_foods" placeholder="例如：伊朗 - 拉文什；新疆 - 馕。"></textarea>
+                  </label>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head">
+                  <h3>二、篇章主线整合</h3>
+                  <span class="score">3 分</span>
+                </div>
+                <p class="stem">这篇文章表面上写小麦旅行，实际上还写了什么？请把文章主线补完整。</p>
+                <div class="subparts">
+                  <label>小麦从两河流域出发 -> 在不同地方变成不同的面食 -> 这些面食进入当地人的
+                    <textarea class="answer-box short" name="q2_life" placeholder="生活？情感？文化？"></textarea>
+                  </label>
+                  <label>小麦改变了中国和世界的
+                    <textarea class="answer-box short" name="q2_pattern" placeholder="请写出文章中的概括。"></textarea>
+                  </label>
+                  <label>作者最后想说明：小麦把什么串联起来？
+                    <textarea class="answer-box short" name="q2_center" placeholder="请写出中心。"></textarea>
+                  </label>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head">
+                  <h3>三、核心证据题</h3>
+                  <span class="score">3 分</span>
+                </div>
+                <p class="stem">下面四条材料中，哪两条最能证明“麦子不仅改变饮食，也进入了人的生活和文化”？哪一条主要是路线或制作背景，不能直接证明文化意义？</p>
+                <p class="callout">A. 麦子从两河流域出发，翻过高原来到中国，又到达欧洲和北非。<br />B. 馕在维吾尔文化里有平安、团圆、吉祥之意，远行的人吃一口家里的馕能够减轻乡愁。<br />C. 阜阳馒头蘸酱豆，是阜阳人舌尖上最难忘的记忆。<br />D. 烤馕需要和面、配料、造型、预热馕坑、打馕等多个步骤。</p>
+                <label>我认为最核心的证据是
+                  <textarea class="answer-box short" name="q3_core" placeholder="我认为最核心的证据是……"></textarea>
+                </label>
+                <label>它们分别证明了什么？
+                  <textarea class="answer-box" name="q3_explain" placeholder="因为……证明了……；……证明了……"></textarea>
+                </label>
+                <label>我认为主要是背景的证据是
+                  <textarea class="answer-box short" name="q3_background" placeholder="它主要说明……不能直接证明……"></textarea>
+                </label>
+              </section>
+
+              <section class="question">
+                <div class="question-head">
+                  <h3>四、评价迁移题</h3>
+                  <span class="score">2 分</span>
+                </div>
+                <p class="stem">如果有同学说：“这篇文章只是介绍几种面食，没有更深的意思。”你同意吗？请根据原文回答。</p>
+                <div class="subparts">
+                  <label>我的观点
+                    <textarea class="answer-box short" name="q4_view" placeholder="我同意 / 不同意，因为……"></textarea>
+                  </label>
+                  <div class="evidence-row">
+                    <label>原文证据 1
+                      <textarea class="answer-box short" name="q4_evidence_1" placeholder="请写原文依据。"></textarea>
+                    </label>
+                    <label>它说明什么？
+                      <textarea class="answer-box short" name="q4_explain_1" placeholder="它证明……"></textarea>
+                    </label>
+                  </div>
+                  <div class="evidence-row">
+                    <label>原文证据 2
+                      <textarea class="answer-box short" name="q4_evidence_2" placeholder="请写原文依据。"></textarea>
+                    </label>
+                    <label>它说明什么？
+                      <textarea class="answer-box short" name="q4_explain_2" placeholder="它证明……"></textarea>
+                    </label>
+                  </div>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head">
+                  <h3>五、A8 复盘题</h3>
+                  <span class="score">不计主分</span>
+                </div>
+                <p class="stem">这篇文章地名和食物名很多。你做题时是怎么防止自己被名字带跑的？</p>
+                <div class="subparts">
+                  <label>我先抓住的路线是
+                    <textarea class="answer-box short" name="q5_route_strategy" placeholder="我先抓住……"></textarea>
+                  </label>
+                  <label>我把例子分成了
+                    <textarea class="answer-box short" name="q5_categories" placeholder="例如：路线、食物做法、文化意义、中心总结。"></textarea>
+                  </label>
+                  <label>我认为最能证明中心的例子是
+                    <textarea class="answer-box short" name="q5_best_evidence" placeholder="我认为……"></textarea>
+                  </label>
+                  <label>下次读这种文章，我要先问自己
+                    <textarea class="answer-box short" name="q5_next" placeholder="这些例子共同证明什么？"></textarea>
+                  </label>
+                </div>
+              </section>
+            </div>
+          </section>
+        </section>
+      </form>
+
+      <p class="footer-note">学生端只用于独立作答。导出的 JSON 可交给助学者进行批改与画像回流。</p>
+    </main>
+
+    <script src="./fanrunran-reading-page.js"></script>
+  </body>
+</html>

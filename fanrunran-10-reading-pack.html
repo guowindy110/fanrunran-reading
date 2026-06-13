@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>范润然10篇阅读题成品包</title>
+    <link rel="stylesheet" href="./fanrunran-reading-tokens.css" />
+    <style>
+      /* 童趣花园基调：旧变量改指语义 token（见 fanrunran-reading-tokens.css） */
+      :root {
+        --bg: var(--color-bg);
+        --paper: var(--color-surface);
+        --ink: var(--color-text);
+        --muted: var(--color-text-muted);
+        --line: var(--color-border);
+        --accent: var(--color-brand);
+        --accent-2: var(--color-secondary-strong);
+        --soft: var(--color-brand-soft);
+        --warn: var(--color-secondary-soft);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 10% -2%, rgba(79, 157, 116, 0.10), transparent 36%),
+          radial-gradient(circle at 92% 4%, rgba(242, 199, 95, 0.16), transparent 38%),
+          linear-gradient(135deg, var(--sun-50) 0%, var(--leaf-50) 58%, var(--sun-100) 100%);
+        background-attachment: fixed;
+        font-family: var(--font-sans);
+      }
+
+      .toolbar {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px max(18px, calc((100vw - 1180px) / 2));
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 253, 248, 0.96);
+        backdrop-filter: blur(10px);
+      }
+
+      .toolbar strong {
+        color: var(--accent);
+      }
+
+      .toolbar button,
+      .toolbar a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 36px;
+        padding: 0 12px;
+        border: 1px solid #bdd7ca;
+        border-radius: var(--radius-lg);
+        color: var(--accent);
+        background: var(--soft);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .shell {
+        display: grid;
+        grid-template-columns: 320px minmax(0, 1fr);
+        gap: 18px;
+        width: min(1180px, calc(100% - 32px));
+        margin: 24px auto 60px;
+      }
+
+      aside,
+      main {
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        background: var(--paper);
+        box-shadow: 0 18px 48px rgba(53, 70, 60, 0.1);
+      }
+
+      aside {
+        align-self: start;
+        position: sticky;
+        top: 74px;
+        padding: 18px;
+      }
+
+      main {
+        min-width: 0;
+        padding: 28px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      .kicker {
+        margin-bottom: 8px;
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .status-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin: 16px 0;
+      }
+
+      .metric {
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        background: #faf8f1;
+      }
+
+      .metric span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .metric strong {
+        font-size: 20px;
+      }
+
+      .slot-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      .protocol {
+        margin: 16px 0 14px;
+        padding: 14px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .protocol-title {
+        margin-bottom: 8px;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .protocol ol {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.65;
+      }
+
+      .protocol code {
+        color: var(--accent-2);
+        font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-weight: 800;
+      }
+
+      .slot {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        color: var(--ink);
+        background: #fff;
+        text-align: left;
+        cursor: pointer;
+      }
+
+      .slot.active {
+        border-color: #88b8a4;
+        background: var(--soft);
+      }
+
+      .slot.pending {
+        background: #fbf6ed;
+      }
+
+      .slot small {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .slot .badge {
+        display: inline-flex;
+        margin-bottom: 4px;
+        padding: 2px 7px;
+        border-radius: 999px;
+        color: var(--accent);
+        background: var(--soft);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .slot.pending .badge {
+        color: var(--accent-2);
+        background: var(--warn);
+      }
+
+      .pack-frame {
+        display: grid;
+        gap: 16px;
+      }
+
+      .directory-panel {
+        display: grid;
+        gap: 16px;
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        background: #fbfaf5;
+      }
+
+      .directory-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .directory-head h2 {
+        margin-bottom: 6px;
+        font-size: 22px;
+      }
+
+      .directory-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .directory-item {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 12px;
+        min-height: 76px;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        color: var(--ink);
+        background: #fff;
+        text-decoration: none;
+      }
+
+      .directory-item:hover {
+        border-color: #88b8a4;
+        background: var(--soft);
+      }
+
+      .directory-item.pending {
+        color: var(--muted);
+        background: #fbf6ed;
+      }
+
+      .directory-index {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        color: #fff;
+        background: var(--accent);
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .directory-item.pending .directory-index {
+        color: var(--accent-2);
+        background: var(--warn);
+      }
+
+      .directory-title {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 900;
+      }
+
+      .directory-focus {
+        display: block;
+        margin-top: 4px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .directory-action {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .directory-item.pending .directory-action {
+        color: var(--accent-2);
+      }
+
+      .current-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .current-head h1 {
+        margin-bottom: 6px;
+        font-size: 28px;
+      }
+
+      .current-meta {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .link-actions {
+        flex: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+
+      .open-link {
+        flex: none;
+        display: inline-flex;
+        align-items: center;
+        min-height: 36px;
+        padding: 0 12px;
+        border: 1px solid #bdd7ca;
+        border-radius: var(--radius-lg);
+        color: var(--accent);
+        background: var(--soft);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .open-link.primary {
+        border-color: var(--accent);
+        color: #fff;
+        background: var(--accent);
+      }
+
+      #content {
+        margin: 0;
+        white-space: pre-wrap;
+        word-break: break-word;
+        color: var(--ink);
+        font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.9;
+      }
+
+      @media (max-width: 860px) {
+        .shell {
+          grid-template-columns: 1fr;
+        }
+
+        aside {
+          position: static;
+        }
+
+        .current-head {
+          display: block;
+        }
+
+        .directory-head {
+          display: block;
+        }
+
+        .directory-list {
+          grid-template-columns: 1fr;
+        }
+
+        .link-actions {
+          justify-content: flex-start;
+        }
+
+        .open-link {
+          margin-top: 10px;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .toolbar,
+        aside,
+        .directory-panel,
+        .current-head {
+          display: none;
+        }
+
+        .shell {
+          display: block;
+          width: 100%;
+          margin: 0;
+        }
+
+        main {
+          padding: 0;
+          border: 0;
+          box-shadow: none;
+        }
+
+        #content {
+          font-size: 12pt;
+          line-height: 1.75;
+        }
+      }
+
+      /* ============================================================
+         10 天成长花园路径（成功判据可见 · 复用进步花园视觉语言）
+         已成题 = 开花的植株（可点击进入做题）；待素材 = 土里的种子。
+         ============================================================ */
+      .garden-path-section {
+        margin-bottom: 18px;
+        padding: 22px 22px 16px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-xl);
+        background:
+          radial-gradient(circle at 50% 120%, rgba(121, 185, 221, 0.16), transparent 60%),
+          linear-gradient(180deg, var(--color-info-soft) 0%, var(--paper) 58%);
+        box-shadow: var(--shadow-md);
+      }
+      .garden-path-head h2 {
+        margin: 0;
+        font-family: var(--font-round);
+        font-size: 24px;
+        color: var(--color-heading);
+      }
+      .garden-path-sub {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .garden-progress {
+        margin-top: 12px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--color-surface-soft);
+        overflow: hidden;
+      }
+      .garden-progress-fill {
+        height: 100%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--color-plant-grow), var(--color-plant-bloom));
+        transition: width var(--dur-slow) var(--ease-out);
+      }
+      .garden-path {
+        list-style: none;
+        margin: 16px 0 0;
+        padding: 10px 4px 6px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(116px, 1fr));
+        gap: 10px;
+      }
+      .garden-station {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        padding: 10px 6px 12px;
+        border-radius: var(--radius-lg);
+        text-align: center;
+        text-decoration: none;
+        color: var(--ink);
+        transition: transform var(--dur) var(--ease-bounce), background var(--dur-fast) var(--ease-out);
+      }
+      .garden-station:nth-child(even) { transform: translateY(12px); }
+      a.garden-station:hover { background: var(--color-surface-soft); }
+      a.garden-station:active { transform: scale(0.96); }
+      a.garden-station:nth-child(even):active { transform: translateY(12px) scale(0.96); }
+      .garden-station-svg { width: 86px; height: 102px; }
+      .garden-soil { fill: var(--color-soil); opacity: 0.9; }
+      .garden-stem { fill: none; stroke: var(--color-plant-grow); stroke-width: 4.5; stroke-linecap: round; }
+      .garden-leaf { fill: var(--color-plant-grow); }
+      .garden-petal { fill: var(--color-plant-bloom); }
+      .garden-flower-core { fill: var(--color-sun-ray); }
+      .garden-seed { fill: var(--color-plant-seed); }
+      .garden-seed-shine { fill: var(--color-sun-ray); opacity: 0.55; }
+      .garden-station.pending .garden-leaf { fill: var(--color-plant-sprout); }
+      .garden-day {
+        font-size: 12px;
+        font-weight: 900;
+        color: var(--color-secondary-strong);
+      }
+      .garden-station-title {
+        font-size: 12.5px;
+        font-weight: 800;
+        line-height: 1.3;
+        color: var(--ink);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .garden-station.pending .garden-station-title { color: var(--muted); }
+      .garden-flag {
+        font-size: 11px;
+        font-weight: 800;
+        color: var(--accent-strong, var(--accent));
+        background: var(--color-brand-soft);
+        border-radius: 999px;
+        padding: 1px 9px;
+      }
+      .garden-station.pending .garden-flag {
+        color: var(--color-secondary-strong);
+        background: var(--color-secondary-soft);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .garden-station, a.garden-station:active { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <strong>范润然10篇阅读题成品包</strong>
+      <div>
+        <a href="./fanrunran-self-selected-reading-kit.md" target="_blank" rel="noreferrer">工作台规则</a>
+        <button type="button" onclick="window.print()">打印当前篇</button>
+      </div>
+    </div>
+
+    <div class="shell">
+      <aside>
+        <p class="kicker">可落地版本</p>
+        <h2>10篇阅读题总控</h2>
+        <p class="current-meta">
+          最终产物是一套 10 篇阅读题。每篇必须先过画像、系统分析、八轴诊断和题目技能映射，再生成 4 道主题题 + 1 道 A8 复盘题。
+        </p>
+
+        <div class="status-row">
+          <div class="metric">
+            <span>已成题</span>
+            <strong id="doneCount">7</strong>
+          </div>
+          <div class="metric">
+            <span>待素材</span>
+            <strong id="pendingCount">3</strong>
+          </div>
+          <div class="metric">
+            <span>总篇数</span>
+            <strong>10</strong>
+          </div>
+        </div>
+
+        <div class="protocol">
+          <div class="protocol-title">每篇强制生成链</div>
+          <ol>
+            <li>范润然画像与本轮卡点</li>
+            <li>素材类型、难度与可用度诊断</li>
+            <li>A1-A8 八轴可用度与主轴选择</li>
+            <li><code>材料证据 -> 可考点 -> 题型 -> 脚手架 -> 评分点</code></li>
+            <li>画像回流与下一篇训练建议</li>
+          </ol>
+        </div>
+
+        <div class="slot-list" id="slotList"></div>
+      </aside>
+
+      <main>
+        <section class="garden-path-section" aria-labelledby="gardenPathTitle">
+          <div class="garden-path-head">
+            <p class="kicker">10 天成长花园</p>
+            <h2 id="gardenPathTitle">范润然的阅读成长路径</h2>
+            <p class="garden-path-sub">每完成一篇，就有一株能力植物开花；还没放素材的几天先埋着种子，等你来浇水。</p>
+            <div class="garden-progress" aria-hidden="true">
+              <div class="garden-progress-fill" id="gardenProgressFill" style="width:0%"></div>
+            </div>
+          </div>
+          <ul class="garden-path" id="gardenPath"></ul>
+        </section>
+
+        <section class="directory-panel" aria-labelledby="studentDirectoryTitle">
+          <div class="directory-head">
+            <div>
+              <p class="kicker">学生端目录</p>
+              <h2 id="studentDirectoryTitle">直接进入做题页面</h2>
+              <p class="current-meta">已成题篇目可直接跳转到左侧阅读材料、右侧题目的学生作答页。</p>
+            </div>
+            <div class="current-meta">1-7 篇已开放｜8-10 篇待素材</div>
+          </div>
+          <div class="directory-list" id="studentDirectory"></div>
+        </section>
+
+        <section class="pack-frame">
+          <header class="current-head">
+            <div>
+              <p class="kicker" id="currentStatus">已成题</p>
+              <h1 id="currentTitle">第1篇：《何为勇气》</h1>
+              <div class="current-meta" id="currentMeta">A4 篇章整合 / A6 证据整合</div>
+            </div>
+            <div class="link-actions">
+              <a class="open-link primary" id="openStudent" href="./fanrunran-reading-student-01-courage.html" target="_blank" rel="noreferrer">
+                学生做题
+              </a>
+              <a class="open-link" id="openReview" href="./fanrunran-reading-review-01-courage.html" target="_blank" rel="noreferrer">
+                助学解读
+              </a>
+              <a class="open-link" id="openCurrent" href="./fanrunran-reading-output-01-courage.md" target="_blank" rel="noreferrer">
+                完整原稿
+              </a>
+            </div>
+          </header>
+          <pre id="content">正在加载训练包...</pre>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const slots = [
+        {
+          index: 1,
+          status: "已成题",
+          title: "《何为勇气》",
+          focus: "A4 篇章整合 / A6 证据整合",
+          note: "故事 + 概念解释，训练核心证据。",
+          studentHref: "./fanrunran-reading-student-01-courage.html",
+          reviewHref: "./fanrunran-reading-review-01-courage.html",
+          href: "./fanrunran-reading-output-01-courage.md"
+        },
+        {
+          index: 2,
+          status: "已成题",
+          title: "短视频行业与“微短剧”风潮",
+          focus: "A4 转折主线 / A6 证据强弱",
+          note: "短段落训练，谨慎使用。",
+          studentHref: "./fanrunran-reading-student-02-short-video.html",
+          reviewHref: "./fanrunran-reading-review-02-short-video.html",
+          href: "./fanrunran-reading-output-02-short-video.md"
+        },
+        {
+          index: 3,
+          status: "已成题",
+          title: "《为什么读古希腊神话？》",
+          focus: "A4 篇章整合 / A6 多证据 / A7 评价迁移",
+          note: "正式长文训练，例子分类。",
+          studentHref: "./fanrunran-reading-student-03-greek-myth.html",
+          reviewHref: "./fanrunran-reading-review-03-greek-myth.html",
+          href: "./fanrunran-reading-output-03-greek-myth.md"
+        },
+        {
+          index: 4,
+          status: "已成题",
+          title: "《一粒麦子的旅行》",
+          focus: "A4 路线主线 / A6 文化证据",
+          note: "说明性散文，训练从路线到文化意义。",
+          studentHref: "./fanrunran-reading-student-04-wheat.html",
+          reviewHref: "./fanrunran-reading-review-04-wheat.html",
+          href: "./fanrunran-reading-output-04-wheat.md"
+        },
+        {
+          index: 5,
+          status: "已成题",
+          title: "《来自2300年前的问候》",
+          focus: "A4 双事例整合 / A6 证据作用 / A7 评价迁移",
+          note: "文化类文章，训练感受回到证据。",
+          studentHref: "./fanrunran-reading-student-05-greeting.html",
+          reviewHref: "./fanrunran-reading-review-05-greeting.html",
+          href: "./fanrunran-reading-output-05-greeting.md"
+        },
+        {
+          index: 6,
+          status: "已成题",
+          title: "《为什么博物馆里会有“假货”？》",
+          focus: "A4 因果链 / A6 证据边界 / A7 概念辨析",
+          note: "说明文训练，区分复制品与仿制品。",
+          studentHref: "./fanrunran-reading-student-06-museum-fakes.html",
+          reviewHref: "./fanrunran-reading-review-06-museum-fakes.html",
+          href: "./fanrunran-reading-output-06-museum-fakes.md"
+        },
+        {
+          index: 7,
+          status: "已成题",
+          title: "《打树花》",
+          focus: "A4 场面过程 / A5 人物形象 / A6 描写证据",
+          note: "民俗场景散文，训练从好看到证据。",
+          studentHref: "./fanrunran-reading-student-07-dashuhua.html",
+          reviewHref: "./fanrunran-reading-review-07-dashuhua.html",
+          href: "./fanrunran-reading-output-07-dashuhua.md"
+        },
+        { index: 8, status: "待素材", title: "第8篇", focus: "A3 非连续信息 / A6 互证", note: "优先选正文 + 表格/路线/规则材料。" },
+        { index: 9, status: "待素材", title: "第9篇", focus: "A4 情感变化 / A6 细节证据", note: "优先选成长或抒情散文，证据点要清楚。" },
+        { index: 10, status: "待素材", title: "第10篇", focus: "A4+A6+A7 综合复测", note: "用来观察能否减少支架、独立完成。" }
+      ];
+
+      const fallback = (slot) => `# 范润然自选素材第 ${slot.index} 篇阅读题：待素材
+
+> 状态：${slot.status}
+> 本篇建议主轴：${slot.focus}
+> 产出性质：10 篇阅读题成品包中的第 ${slot.index} 篇
+
+---
+
+## 1. 素材进入标准
+
+本篇还没有放入素材。收到素材后，不直接出题，必须先做画像校准、系统分析和八轴素材可用度分析，再决定是否进入本轮训练。
+
+强制生成链：
+
+1. 画像依据：范润然当前重点观察 A4 篇章整合、A6 证据整合、A7 评价迁移，并保留 A3/A8 过程证据。
+2. 系统分析：判断素材类型、阅读难度、信息密度、证据链是否足够。
+3. 八轴诊断：A1-A8 每一轴都过一遍，但只选择 1-2 个主训练轴。
+4. 题目技能映射：调用 eight-axis-reading-item-designer 和 reading-comprehension-item-techniques 的规则，把材料证据转成可考点、小题组脚手架、答题公式、评分点和画像回流。
+5. 成品输出：形成两个逻辑页面，一个学生做题端口，一个助学者/批改后解读页。
+
+必须产出：
+
+1. 素材可用度结论：推荐 / 谨慎使用 / 不建议作为本轮主训练素材。
+2. 八轴可用度表：A1-A8 每一轴都过一遍。
+3. 原文证据池：至少 4 条证据，标明核心证据、背景证据或干扰证据。
+4. 学生做题页：阅读材料 + 作答区 + 自动保存 + 导出画像输入。
+5. 助学者解读页：答案要点、常见低阶答案、评分点、卡点提示、撤梯条件、画像回收。
+
+不合格输出：
+
+- 只有题目，没有原文证据。
+- 只有八轴标签，没有题型、评分点和画像回流。
+- 题目靠常识回答，不需要回到文本。
+- 迁移题没有文本边界，变成泛泛感想。
+
+---
+
+## 2. 本篇预设训练目标
+
+主目标：${slot.focus}
+
+选材提示：${slot.note}
+
+---
+
+## 3. 出题固定题组
+
+1. 定位/入口题：让孩子能进入文本。
+2. 主线/因果/变化题：观察是否能压缩结构。
+3. 核心证据题：观察是否能区分核心证据与背景证据。
+4. 评价/迁移题：观察观点是否有文本依据。
+5. A8 复盘题：观察她如何找证据、哪里卡、下次怎么改。
+`;
+
+      const slotList = document.getElementById("slotList");
+      const content = document.getElementById("content");
+      const currentTitle = document.getElementById("currentTitle");
+      const currentStatus = document.getElementById("currentStatus");
+      const currentMeta = document.getElementById("currentMeta");
+      const openCurrent = document.getElementById("openCurrent");
+      const openStudent = document.getElementById("openStudent");
+      const openReview = document.getElementById("openReview");
+      const studentDirectory = document.getElementById("studentDirectory");
+
+      function renderStudentDirectory() {
+        studentDirectory.innerHTML = "";
+        for (const slot of slots) {
+          const item = document.createElement(slot.studentHref ? "a" : "div");
+          item.className = `directory-item ${slot.studentHref ? "" : "pending"}`;
+          if (slot.studentHref) {
+            item.href = slot.studentHref;
+            item.setAttribute("aria-label", `进入第${slot.index}篇学生做题页面：${slot.title}`);
+          } else {
+            item.setAttribute("aria-disabled", "true");
+          }
+          item.innerHTML = `
+            <span class="directory-index">${String(slot.index).padStart(2, "0")}</span>
+            <span>
+              <span class="directory-title">${slot.title}</span>
+              <span class="directory-focus">${slot.focus}</span>
+            </span>
+            <span class="directory-action">${slot.studentHref ? "开始做题" : "待素材"}</span>
+          `;
+          studentDirectory.appendChild(item);
+        }
+      }
+
+      function renderSlots(activeIndex) {
+        slotList.innerHTML = "";
+        for (const slot of slots) {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = `slot ${slot.index === activeIndex ? "active" : ""} ${slot.href ? "" : "pending"}`;
+          button.innerHTML = `
+            <span class="badge">${slot.status}</span>
+            <strong>第${slot.index}篇：${slot.title}</strong>
+            <small>${slot.focus}</small>
+            <small>${slot.note}</small>
+          `;
+          button.addEventListener("click", () => selectSlot(slot.index));
+          slotList.appendChild(button);
+        }
+      }
+
+      function updateHeader(slot) {
+        currentStatus.textContent = slot.status;
+        currentTitle.textContent = `第${slot.index}篇：${slot.title}`;
+        currentMeta.textContent = `${slot.focus}｜${slot.note}`;
+        if (slot.studentHref) {
+          openStudent.href = slot.studentHref;
+          openStudent.style.display = "inline-flex";
+        } else {
+          openStudent.removeAttribute("href");
+          openStudent.style.display = "none";
+        }
+        if (slot.reviewHref) {
+          openReview.href = slot.reviewHref;
+          openReview.style.display = "inline-flex";
+        } else {
+          openReview.removeAttribute("href");
+          openReview.style.display = "none";
+        }
+        if (slot.href) {
+          openCurrent.href = slot.href;
+          openCurrent.style.display = "inline-flex";
+        } else {
+          openCurrent.removeAttribute("href");
+          openCurrent.style.display = "none";
+        }
+      }
+
+      function selectSlot(index) {
+        const slot = slots.find((item) => item.index === index) ?? slots[0];
+        renderSlots(slot.index);
+        updateHeader(slot);
+
+        if (!slot.href) {
+          content.textContent = fallback(slot);
+          return;
+        }
+
+        fetch(slot.href)
+          .then((response) => {
+            if (!response.ok) throw new Error("训练包加载失败");
+            return response.text();
+          })
+          .then((text) => {
+            content.textContent = text;
+          })
+          .catch(() => {
+            content.textContent =
+              "完整原稿需要通过本地服务器查看。\n\n你可以点击右上角「完整原稿」按钮单独打开这一篇，或用本地服务器打开本页（例如在该文件夹运行一个静态服务器）。\n\n本页的「成长花园路径」和篇目导航在直接打开时已可正常使用。";
+          });
+      }
+
+      function gardenPetals(cx, cy) {
+        let s = "";
+        for (let a = 0; a < 360; a += 72) {
+          s += `<ellipse class="garden-petal" cx="${cx}" cy="${cy - 5}" rx="3.1" ry="4.7" transform="rotate(${a} ${cx} ${cy})"/>`;
+        }
+        return s + `<circle class="garden-flower-core" cx="${cx}" cy="${cy}" r="2.6"/>`;
+      }
+
+      function gardenPlantSvg(done) {
+        const soil = `<ellipse class="garden-soil" cx="44" cy="94" rx="27" ry="8"/>`;
+        if (done) {
+          return `<svg class="garden-station-svg" viewBox="0 0 88 102" role="img" aria-hidden="true">
+            ${soil}
+            <path class="garden-stem" d="M44 94 C 39 76 49 60 44 43"/>
+            <ellipse class="garden-leaf" cx="30" cy="70" rx="11" ry="5.5" transform="rotate(-26 30 70)"/>
+            <ellipse class="garden-leaf" cx="58" cy="58" rx="11" ry="5.5" transform="rotate(26 58 58)"/>
+            ${gardenPetals(44, 40)}
+          </svg>`;
+        }
+        return `<svg class="garden-station-svg" viewBox="0 0 88 102" role="img" aria-hidden="true">
+          ${soil}
+          <path class="garden-seed" d="M44 78 C 50 80 51.5 86 48 90 C 46 92 42 92 40 90 C 36.5 86 38 80 44 78 Z"/>
+          <ellipse class="garden-seed-shine" cx="41.5" cy="83" rx="1.6" ry="2.6" transform="rotate(-24 41.5 83)"/>
+          <path class="garden-leaf" d="M44 80 q-8 -3 -11 2 q7 3 11 -2 Z"/>
+        </svg>`;
+      }
+
+      function renderGardenPath() {
+        const path = document.getElementById("gardenPath");
+        if (!path) return;
+        path.innerHTML = "";
+        let done = 0;
+        for (const slot of slots) {
+          const isDone = Boolean(slot.studentHref);
+          if (isDone) done++;
+          const el = document.createElement(isDone ? "a" : "div");
+          el.className = `garden-station ${isDone ? "" : "pending"}`.trim();
+          if (isDone) {
+            el.href = slot.studentHref;
+            el.setAttribute("aria-label", `第${slot.index}天 ${slot.title}：已开花，进入做题`);
+          } else {
+            el.setAttribute("aria-disabled", "true");
+          }
+          el.innerHTML = `
+            ${gardenPlantSvg(isDone)}
+            <span class="garden-day">第 ${slot.index} 天</span>
+            <span class="garden-station-title">${slot.title}</span>
+            <span class="garden-flag">${isDone ? "已开花" : "待播种"}</span>
+          `;
+          path.appendChild(el);
+        }
+        const fill = document.getElementById("gardenProgressFill");
+        if (fill) fill.style.width = `${Math.round((done / slots.length) * 100)}%`;
+      }
+
+      renderStudentDirectory();
+      renderGardenPath();
+      selectSlot(1);
+    </script>
+  </body>
+</html>

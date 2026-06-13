@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>范润然阅读题 01 · 何为勇气 · 学生端</title>
+    <link rel="stylesheet" href="./fanrunran-reading-page.css" />
+  </head>
+  <body data-exam-id="fanrunran_courage_01" data-exam-title="范润然阅读题01 · 何为勇气">
+    <main class="page">
+      <header class="top-card">
+        <div>
+          <p class="kicker">学生做题端口 · 第 1 篇</p>
+          <h1>何为勇气</h1>
+          <p class="subtitle">
+            阅读左页材料，完成右页 5 道题。请重点观察：故事怎样推进到观点，哪些证据真正能证明“勇气不是不害怕”。
+          </p>
+        </div>
+
+        <aside class="mode-panel" aria-label="本页用途">
+          <strong>只给学生作答</strong>
+          <span>A4 篇章整合 / A6 证据整合</span>
+          <span>建议用时：25-35 分钟</span>
+        </aside>
+
+        <div class="toolbar" aria-label="作答工具">
+          <span class="status" id="saveStatus">尚未开始作答。</span>
+          <div class="timer-panel" aria-label="计时器">
+            <span class="timer-display" id="timerDisplay">00:00:00</span>
+            <button type="button" class="primary" id="timerStartBtn">开始计时</button>
+            <button type="button" id="timerPauseBtn">暂停</button>
+            <button type="button" id="timerResetBtn">重置</button>
+          </div>
+          <div class="actions" aria-label="导出与页面切换">
+            <button type="button" id="exportJsonBtn">导出画像输入</button>
+            <button type="button" id="exportTxtBtn">导出作答文本</button>
+            <button type="button" data-print-page>打印</button>
+            <button type="button" id="clearBtn">清空</button>
+            <a class="button-link" href="./fanrunran-reading-review-01-courage.html">助学者解读</a>
+            <a class="button-link" href="./fanrunran-10-reading-pack.html">10篇总控</a>
+          </div>
+        </div>
+      </header>
+
+      <form id="examForm" autocomplete="off">
+        <section class="meta-grid" aria-label="学生信息">
+          <label>姓名
+            <input type="text" name="student_name" value="范润然" />
+          </label>
+          <label>年级
+            <input type="text" name="grade" value="五年级" />
+          </label>
+          <label>年龄
+            <input type="number" name="age" min="6" max="18" placeholder="例如：11" />
+          </label>
+          <label>日期
+            <input type="text" name="exam_date" placeholder="例如：2026-06-11" />
+          </label>
+        </section>
+
+        <section class="book-spread" aria-label="阅读材料与题目">
+          <article class="book-page reading-page">
+            <div class="section-head">
+              <h2>阅读材料</h2>
+              <span class="small-note">故事 + 观点阐释</span>
+            </div>
+
+            <div class="article">
+              <h2 class="article-title">何为勇气</h2>
+              <p class="source">石头</p>
+              <p>小明和他的小伙伴们感情深厚，在学校里形影不离。</p>
+              <p>一天，学校组织了一次拓展活动，其中一个项目是攀爬一座高墙。这座墙有近三米高，许多同学都有些害怕，不敢尝试。小刚是小明的好朋友，他平时胆子比较小，看到这么高的墙更是想退缩。他悄悄对小明说：“我有点恐高，实在不敢爬，你能不能帮我跟老师说一下，让我跳过这个项目？”小明看了看高墙，心里也有些发怵，但他想到小刚平时对自己的帮助，便鼓起勇气说：“别怕，我陪你一起爬！我们互相鼓励，一定能成功的。”</p>
+              <p>攀爬过程中，小刚几次因为害怕而停下，小明始终在他身边，耐心地鼓励他：“别往下看，眼睛盯着上面，一步一步来，我就在你后面。”最终，两人一起成功爬上了高墙。</p>
+              <p>回到家后，小明把这件事告诉了妈妈。妈妈听后赞许道：“这才是真正的勇气。勇气不是不害怕，而是即使害怕，也愿意为了正确的事情去面对困难。”小明点点头，心里对“勇气”有了新的理解。</p>
+              <p>其实，古希腊哲学家亚里士多德在其著作《尼各马可伦理学》中早已对“勇气”进行了深刻的探讨。亚里士多德指出，若仅仅把勇气理解为“克服怯懦”，那就太片面了。就像说健康只是“不生病”一样（其实健康的核心是身体机能正常运转，而不只是没有生病，一个天天熬夜的人即使没生病，也不能算健康）。勇气也不仅仅是面对危险时的无畏。小明在攀爬高墙时虽然感到害怕，但他选择陪伴和鼓励朋友，最终和小刚一起克服了恐惧。这种行为不是盲目的冒险，而是在理性的指导下，做出合理的选择。</p>
+              <p>真正的勇气需要把握好分寸，这就是亚里士多德提出的“黄金中道”。它不是胆小和鲁莽的中间点，而是指根据具体情况做出合理的判断。比如，当同学遇到校园霸凌的时候，袖手旁观是怯懦，以暴制暴是鲁莽，而向老师客观地说明情况，推动问题解决才是真正的勇气。</p>
+              <p>亚里士多德还强调，人的行为在不同层面受到智慧的内在制约。实践智慧是一种根据实际情况做出正确判断的能力，要求我们在行动之前考虑清楚对象、方式和后果。它的作用就是调整行动的分寸，既不能因为害怕而退缩（怯懦），也不能因冲动而不计后果（鲁莽）。这种能力并非与生俱来，而是通过经验积累和反思逐渐培养出来的。</p>
+              <p>几个月后，学校又组织了一次类似的拓展活动。这一次，小刚主动走到小明身边，说：“这次我们一起爬吧，我已经不那么害怕了。”小明笑着点点头，两人再次合作，顺利完成了任务。活动结束后，小刚感慨道：“原来勇气是可以传递的。”小明也深有感触：“是啊，真正的勇气不仅能让自己变得更强，还能帮助别人。”</p>
+              <p>现在，每次路过拓展训练场，小明都会往高墙的方向看一眼。阳光洒在墙面上，映出几道斑驳的影子。他终于明白：真正的勇气不是无所畏惧，而是在面对恐惧时，依然能够做出清醒而负责任的选择。正如亚里士多德所言：“美德需要两样东西，知道该做什么的理性，以及去做该做的事的勇气。”</p>
+              <p class="source">素材来源：02石头《何为勇气》MinerU 导出稿</p>
+            </div>
+          </article>
+
+          <section class="book-page questions-page">
+            <div class="section-head">
+              <h2>作答区</h2>
+              <span class="small-note">4 道主题题 + 1 道复盘题</span>
+            </div>
+
+            <div class="question-list">
+              <section class="question">
+                <div class="question-head">
+                  <h3>一、信息定位与文本结构</h3>
+                  <span class="score">3 分</span>
+                </div>
+                <p class="stem">这篇文章不是只讲一个小故事。请按顺序写出文章的三个部分。</p>
+                <div class="subparts">
+                  <label>1. 先写了一个什么故事？
+                    <textarea class="answer-box short" name="q1_story" placeholder="先写……"></textarea>
+                  </label>
+                  <label>2. 中间借谁的观点解释“勇气”？
+                    <textarea class="answer-box short" name="q1_viewpoint" placeholder="中间借……"></textarea>
+                  </label>
+                  <label>3. 最后用什么变化说明勇气产生了影响？
+                    <textarea class="answer-box short" name="q1_change" placeholder="最后用……"></textarea>
+                  </label>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head">
+                  <h3>二、主线整合</h3>
+                  <span class="score">3 分</span>
+                </div>
+                <p class="stem">请把文章中“小明对勇气的理解变化”补成一条链。</p>
+                <div class="chain-grid">
+                  <label>看到高墙也害怕 -> 
+                    <textarea class="answer-box short" name="q2_step_1" placeholder="他接着怎么做？"></textarea>
+                  </label>
+                  <label>听妈妈解释勇气 -> 
+                    <textarea class="answer-box short" name="q2_step_2" placeholder="他对勇气的理解怎样加深？"></textarea>
+                  </label>
+                  <label>看到小刚后来主动挑战 -> 
+                    <textarea class="answer-box short" name="q2_step_3" placeholder="这个变化说明什么？"></textarea>
+                  </label>
+                  <label>真正的勇气是：
+                    <textarea class="answer-box short" name="q2_definition" placeholder="请写出你的概括。"></textarea>
+                  </label>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head">
+                  <h3>三、核心证据题</h3>
+                  <span class="score">3 分</span>
+                </div>
+                <p class="stem">下面四条材料中，哪两条最能证明“真正的勇气不是无所畏惧，而是清醒、负责地面对困难”？哪一条只是背景证据？请说明理由。</p>
+                <div class="subparts">
+                  <p class="callout">A. 小明和小伙伴们在学校里关系很好。<br />B. 小明自己也害怕高墙，但仍陪小刚一起爬，并一步一步鼓励他。<br />C. 文中用“健康不只是没有生病”来类比勇气不能只理解为“不害怕”。<br />D. 校园霸凌时，旁观是退缩，以暴制暴是鲁莽，客观告诉老师才是合理行动。</p>
+                  <label>我认为最核心的证据是
+                    <textarea class="answer-box short" name="q3_core_evidence" placeholder="例如：我认为最核心的证据是……"></textarea>
+                  </label>
+                  <label>它们分别证明了什么？
+                    <textarea class="answer-box" name="q3_explanation" placeholder="因为……证明了……；……证明了……"></textarea>
+                  </label>
+                  <label>我认为只是背景证据的是
+                    <textarea class="answer-box short" name="q3_background" placeholder="这条只能说明……不能直接证明……"></textarea>
+                  </label>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head">
+                  <h3>四、评价迁移题</h3>
+                  <span class="score">2 分</span>
+                </div>
+                <p class="stem">如果你看到同学被别人嘲笑，不敢参加班级展示，你怎样做才符合文中“真正的勇气”？请写出做法，并说明文中哪两处内容支持你的做法。</p>
+                <div class="subparts">
+                  <label>我的具体做法
+                    <textarea class="answer-box short" name="q4_action" placeholder="我会……"></textarea>
+                  </label>
+                  <div class="evidence-row">
+                    <label>为什么不是退缩？
+                      <textarea class="answer-box short" name="q4_not_cowardice" placeholder="因为……"></textarea>
+                    </label>
+                    <label>为什么不是鲁莽？
+                      <textarea class="answer-box short" name="q4_not_reckless" placeholder="因为……"></textarea>
+                    </label>
+                  </div>
+                  <div class="evidence-row">
+                    <label>文章依据 1
+                      <textarea class="answer-box short" name="q4_basis_1" placeholder="文中哪里支持？"></textarea>
+                    </label>
+                    <label>文章依据 2
+                      <textarea class="answer-box short" name="q4_basis_2" placeholder="文中哪里支持？"></textarea>
+                    </label>
+                  </div>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head">
+                  <h3>五、A8 复盘题</h3>
+                  <span class="score">不计主分</span>
+                </div>
+                <p class="stem">做第 3 题时，你是怎么判断“核心证据”和“背景证据”的？</p>
+                <div class="subparts">
+                  <label>我先看题干要证明的是
+                    <textarea class="answer-box short" name="q5_target" placeholder="题干要证明的是……"></textarea>
+                  </label>
+                  <label>我保留的证据是
+                    <textarea class="answer-box short" name="q5_keep" placeholder="我保留……"></textarea>
+                  </label>
+                  <label>我删掉或降级的证据是
+                    <textarea class="answer-box short" name="q5_drop" placeholder="我删掉或降级……"></textarea>
+                  </label>
+                  <label>下次做证据题，我要先问自己
+                    <textarea class="answer-box short" name="q5_next_strategy" placeholder="这条证据能不能……"></textarea>
+                  </label>
+                </div>
+              </section>
+            </div>
+          </section>
+        </section>
+      </form>
+
+      <p class="footer-note">学生端只用于独立作答。导出的 JSON 可交给助学者进行批改与画像回流。</p>
+    </main>
+
+    <script src="./fanrunran-reading-page.js"></script>
+  </body>
+</html>

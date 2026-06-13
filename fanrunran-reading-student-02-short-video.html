@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>范润然阅读题 02 · 短视频与微短剧 · 学生端</title>
+    <link rel="stylesheet" href="./fanrunran-reading-page.css" />
+  </head>
+  <body data-exam-id="fanrunran_short_video_02" data-exam-title="范润然阅读题02 · 短视频与微短剧">
+    <main class="page">
+      <header class="top-card">
+        <div>
+          <p class="kicker">学生做题端口 · 第 2 篇</p>
+          <h1>短视频与“微短剧”风潮</h1>
+          <p class="subtitle">阅读左页短段落，完成右页 5 道题。请重点观察：“不过”后面才是作者真正要强调的判断。</p>
+        </div>
+        <aside class="mode-panel" aria-label="本页用途">
+          <strong>只给学生作答</strong>
+          <span>A4 转折主线 / A6 证据强弱</span>
+          <span>建议用时：12-18 分钟</span>
+        </aside>
+        <div class="toolbar" aria-label="作答工具">
+          <span class="status" id="saveStatus">尚未开始作答。</span>
+          <div class="timer-panel" aria-label="计时器">
+            <span class="timer-display" id="timerDisplay">00:00:00</span>
+            <button type="button" class="primary" id="timerStartBtn">开始计时</button>
+            <button type="button" id="timerPauseBtn">暂停</button>
+            <button type="button" id="timerResetBtn">重置</button>
+          </div>
+          <div class="actions" aria-label="导出与页面切换">
+            <button type="button" id="exportJsonBtn">导出画像输入</button>
+            <button type="button" id="exportTxtBtn">导出作答文本</button>
+            <button type="button" data-print-page>打印</button>
+            <button type="button" id="clearBtn">清空</button>
+            <a class="button-link" href="./fanrunran-reading-review-02-short-video.html">助学者解读</a>
+            <a class="button-link" href="./fanrunran-10-reading-pack.html">10篇总控</a>
+          </div>
+        </div>
+      </header>
+
+      <form id="examForm" autocomplete="off">
+        <section class="meta-grid" aria-label="学生信息">
+          <label>姓名<input type="text" name="student_name" value="范润然" /></label>
+          <label>年级<input type="text" name="grade" value="五年级" /></label>
+          <label>年龄<input type="number" name="age" min="6" max="18" placeholder="例如：11" /></label>
+          <label>日期<input type="text" name="exam_date" placeholder="例如：2026-06-11" /></label>
+        </section>
+
+        <section class="book-spread" aria-label="阅读材料与题目">
+          <article class="book-page reading-page">
+            <div class="section-head">
+              <h2>阅读材料</h2>
+              <span class="small-note">行业评论短段落</span>
+            </div>
+            <div class="article">
+              <h2 class="article-title">短视频与“微短剧”风潮</h2>
+              <p>然而，随着短视频内容的爆炸性增长，各大平台短视频内容同质化严重，不过这并不意味着短视频行业已经走到了尽头。</p>
+              <p>如今，各大平台都在思考如何运用 5G、AI、大数据等技术的应用在短视频时代走出不一样的道路，而这些技术进步可能会造就短视频行业发展的下一个风口，如最近刮起的“微短剧”风潮。</p>
+              <p class="source">素材来源：用户提供短段落</p>
+            </div>
+          </article>
+
+          <section class="book-page questions-page">
+            <div class="section-head">
+              <h2>作答区</h2>
+              <span class="small-note">4 道主题题 + 1 道复盘题</span>
+            </div>
+            <div class="question-list">
+              <section class="question">
+                <div class="question-head"><h3>一、信息定位题</h3><span class="score">3 分</span></div>
+                <p class="stem">请从原文中找出四类信息。</p>
+                <div class="subparts">
+                  <label>当前短视频行业面临的问题是<textarea class="answer-box short" name="q1_problem"></textarea></label>
+                  <label>作者不同意的判断是<textarea class="answer-box short" name="q1_rejected_view"></textarea></label>
+                  <label>作者认为可能带来新道路的技术有<textarea class="answer-box short" name="q1_tech"></textarea></label>
+                  <label>作者举出的新风口例子是<textarea class="answer-box short" name="q1_example"></textarea></label>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head"><h3>二、转折主线题</h3><span class="score">3 分</span></div>
+                <p class="stem">请把这段话的逻辑链补完整。</p>
+                <div class="chain-grid">
+                  <label>短视频内容爆炸性增长 -><textarea class="answer-box short" name="q2_step_1" placeholder="接着出现什么问题？"></textarea></label>
+                  <label>但这不意味着<textarea class="answer-box short" name="q2_step_2" placeholder="作者反对什么结论？"></textarea></label>
+                  <label>平台正在思考利用<textarea class="answer-box short" name="q2_step_3" placeholder="哪些技术？"></textarea></label>
+                  <label>这些技术可能带来<textarea class="answer-box short" name="q2_step_4" placeholder="什么新机会？例子是什么？"></textarea></label>
+                </div>
+              </section>
+
+              <section class="question">
+                <div class="question-head"><h3>三、证据强弱题</h3><span class="score">3 分</span></div>
+                <p class="stem">下面四项中，哪一项是作者的核心观点？哪一项是支持观点的例子？哪一项只是背景问题？</p>
+                <p class="callout">A. 短视频内容同质化严重。<br />B. 短视频行业并没有走到尽头。<br />C. 5G、AI、大数据等技术可能帮助平台走出新道路。<br />D. “微短剧”风潮是短视频行业新变化的一个例子。</p>
+                <label>核心观点是<textarea class="answer-box short" name="q3_core_view"></textarea></label>
+                <label>理由和例子分别是<textarea class="answer-box" name="q3_reason_example"></textarea></label>
+                <label>只是背景问题的是<textarea class="answer-box short" name="q3_background"></textarea></label>
+              </section>
+
+              <section class="question">
+                <div class="question-head"><h3>四、评价判断题</h3><span class="score">2 分</span></div>
+                <p class="stem">有人说：“既然短视频内容同质化严重，短视频行业就已经没有发展机会了。”你同意吗？请根据原文回答，并指出这段材料还缺少什么证据，才能更有说服力。</p>
+                <label>我的判断和原文依据<textarea class="answer-box" name="q4_judgement"></textarea></label>
+                <label>这段材料还需要补充的证据<textarea class="answer-box short" name="q4_missing_evidence" placeholder="例如数据、平台案例、微短剧发展结果等。"></textarea></label>
+              </section>
+
+              <section class="question">
+                <div class="question-head"><h3>五、A8 复盘题</h3><span class="score">不计主分</span></div>
+                <p class="stem">这段话里有一个重要的词：“可能”。它提醒我们不能把作者的推测当成已经确定的事实。</p>
+                <div class="subparts">
+                  <label>原文已经明确说出的事实是<textarea class="answer-box short" name="q5_fact"></textarea></label>
+                  <label>原文提出的可能判断是<textarea class="answer-box short" name="q5_possible"></textarea></label>
+                  <label>我不能直接得出的结论是<textarea class="answer-box short" name="q5_limit"></textarea></label>
+                  <label>下次读到“可能、也许、或许”时，我要提醒自己<textarea class="answer-box short" name="q5_strategy"></textarea></label>
+                </div>
+              </section>
+            </div>
+          </section>
+        </section>
+      </form>
+      <p class="footer-note">学生端只用于独立作答。导出的 JSON 可交给助学者进行批改与画像回流。</p>
+    </main>
+    <script src="./fanrunran-reading-page.js"></script>
+  </body>
+</html>
