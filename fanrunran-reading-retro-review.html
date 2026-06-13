@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>范润然阅读回测 · 助学者解读</title>
+    <link rel="stylesheet" href="./fanrunran-reading-page.css" />
+  </head>
+  <body data-exam-id="fanrunran_retro_review" data-exam-title="范润然阅读回测 · 助学者解读">
+    <main class="page">
+      <header class="top-card">
+        <div>
+          <p class="kicker" id="pageKicker">助学者 / 批改后解读 · 回测卷</p>
+          <h1 id="pageTitle">阅读回测解读</h1>
+          <p class="subtitle" id="pageSubtitle">读取中...</p>
+        </div>
+
+        <aside class="mode-panel" aria-label="本页用途">
+          <strong>不直接给学生做题</strong>
+          <span id="axisSummary">A1-A8 综合观察</span>
+          <span>学生完成后再打开</span>
+        </aside>
+
+        <div class="toolbar" aria-label="助学者工具">
+          <span class="status" id="reviewStatus">批改时先看题型，再看证据，再回流画像。</span>
+          <div class="actions">
+            <a class="button-link primary" id="studentLink" href="./fanrunran-reading-retro-student.html">学生做题端口</a>
+            <a class="button-link" id="sourceLink" href="#">完整原稿</a>
+            <a class="button-link" href="./fanrunran-10-reading-pack.html">10篇总控</a>
+            <button type="button" data-print-page>打印解读页</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="book-spread" aria-label="回测诊断与批改解读">
+        <article class="book-page reading-page">
+          <div class="section-head">
+            <h2>诊断定位</h2>
+            <span class="small-note" id="sourceNote">回测卷</span>
+          </div>
+          <div class="review-list" id="diagnosisList"></div>
+        </article>
+
+        <section class="book-page review-page">
+          <div class="section-head">
+            <h2>批改解读</h2>
+            <span class="small-note">答案要点 / 错因 / 回流</span>
+          </div>
+          <div class="review-list" id="answerList"></div>
+        </section>
+      </section>
+
+      <p class="footer-note">助学者端用于批改后解释，不建议学生答题前查看。</p>
+    </main>
+
+    <script>
+      const reviews = {
+        8: {
+          title: "回测卷一：家书",
+          kicker: "助学者 / 批改后解读 · 第 8 篇",
+          subtitle: "A5 写人记事主战场回测。重点看心理变化链、细节作用、人物精神和结尾选择。",
+          axes: "A5 推论与人物 / A6 证据整合 / A7 评价迁移",
+          note: "记叙写人 · A5 主战场",
+          source: "./fanrunran-reading-output-08-jiashu.md",
+          diagnosis: [
+            ["素材可用度", "推荐作为 A5 主战场回测。材料有清晰心理变化线：不愿留守 -> 震撼 -> 自责敬意 -> 思索并主动留守。"],
+            ["核心观察", "孩子能否从动作、细节、家书内容和环境意象中推出人物心理与精神，而不是只复述情节。"],
+            ["常见风险", "心理词空泛；细节作用只写“很感人”；人物品质只贴标签；结尾选择只看字面是否好看。"]
+          ],
+          answers: [
+            ["第 1 题：心理变化链", "上山前：委屈、不愿留守、想调走；看到炒面与家书：震撼、感动；衣冠冢前：自责、敬意；返程及3个月后：思索未来、坚定选择、主动留守。错因回流：漏事件节点回 A4；只写情节不写心理回 A5。"],
+            ["第 2 题：炒面细节作用", "不正确项偏向 D。炒面主要连接抗美援朝战场、战友情谊和小薇心灵触动，不能直接概括为当代边防哨所官兵艰苦朴素。错因回流：被相近主题带偏回 A6。"],
+            ["第 3 题：修辞赏析", "把纸背凹点比作沉睡的心跳，写出历史并非冰冷陈列，而像仍有生命一样触动小薇，也连接了家书、牺牲和精神传承。错因回流：只写“生动形象”回 A6。"],
+            ["第 4 题：精神品质", "体现罗忠诚忠诚祖国、英勇无畏、甘愿牺牲、长久守护祖国的精神。必须结合两处“化作雪山的石头”说明其牺牲意识和守护信念。错因回流：人物标签无证据回 A5/A6。"],
+            ["第 5 题：结尾选择", "A 更有文学性和回扣作用：格桑花开与前文衣冠冢前的花、边防土地和精神传承呼应，含蓄表现小薇已经读懂家书；B 太直白。若选 B，只要理由能紧扣中心也可酌情给分，但高分看证据和回扣中心。"]
+          ]
+        },
+        9: {
+          title: "回测卷二：人民英雄纪念碑的设计智慧",
+          kicker: "助学者 / 批改后解读 · 第 9 篇",
+          subtitle: "说明文读法回测。重点看设计智慧归类、说明方法和判断题排雷。",
+          axes: "A2 说明文读法 / A3 信息定位 / A4 篇章整合 / A6 证据整合",
+          note: "说明文 · 设计智慧",
+          source: "./fanrunran-reading-output-09-monument.md",
+          diagnosis: [
+            ["素材可用度", "推荐作为说明文回测。材料覆盖材料选择、浮雕技艺、建筑比例、纪念意义四类信息。"],
+            ["核心观察", "孩子能否先确认说明对象，再区分“设计智慧”和“纪念内容”，并解释数字、比喻、例子的说明效果。"],
+            ["常见风险", "看见历史事件就选为设计智慧；判断题不回原文；说明方法只报名称不说好处。"]
+          ],
+          answers: [
+            ["第 1 题：设计智慧排雷", "不属于设计智慧的是 D。题写和鎏金增强庄严辨识度，但选项表述重点不是文章强调的设计智慧；A/C 是明确设计智慧，B 是浮雕主题与历史叙事设计。"],
+            ["第 2 题：说明方法", "（1）列数字；（2）打比方，兼有举例。好处要写清：列数字准确说明石料坚固耐久；打比方把浮雕比作历史长卷，形象说明它串联重要历史瞬间。"],
+            ["第 3 题：判断", "（1）可判 √，针脚细节表现雕刻精细和历史真实感；（2）√，分层减地让人物场景立体逼真；（3）×，文中说收分率源自《营造法式》，3:2 是黄金比例，不能混成同一来源。"],
+            ["第 4 题：句子含义", "纪念碑用坚固石材、浮雕、碑文和庄严姿态长期保存民族历史记忆，提醒后人铭记英雄牺牲和近代奋斗历程。高分看是否同时说到“永恒姿态”和“集体记忆”。"]
+          ]
+        },
+        10: {
+          title: "回测卷三 + 四：文体综合回测",
+          kicker: "助学者 / 批改后解读 · 第 10 篇",
+          subtitle: "文言文和对比阅读合并回测。重点看文体读法、断句翻译、动静描写和跨文本证据。",
+          axes: "A1 基础语言 / A2 文体读法 / A3 信息定位 / A5 描写推断 / A6 证据整合 / A7 迁移",
+          note: "文言文 + 对比阅读",
+          source: "./fanrunran-reading-output-10-literary-combo.md",
+          diagnosis: [
+            ["素材可用度", "推荐作为第 10 篇综合回测。它把文言基础、人物评价、课内外配对、动静描写和选择题排雷放在一起。"],
+            ["核心观察", "孩子能否按文体切换读法：文言先借注释读大意，对比阅读先建表格，再细读关键词和描写效果。"],
+            ["常见风险", "文言硬猜现代义；断句把人名拆开；对比阅读只抄信息不概括效果；选择题被“江南水乡”泛化带偏。"]
+          ],
+          answers: [
+            ["《一字之师》第 1 题", "选 B。“兼三衣”在语境中是提起、整理衣服后叩拜，不能按现代常用义理解。错因回流：文言词义望文生义回 A1。"],
+            ["《一字之师》第 2 题", "停顿选 A：齐己/因携所为诗/往谒焉。意思：齐己于是带着自己写的诗去拜见郑谷。错因回流：人名拆错回 A2 文言读法。"],
+            ["《一字之师》第 3 题", "选 A。郑谷把“数枝”改成“一枝”，更能表现早梅之早，属于字斟句酌。"],
+            ["《一字之师》第 4 题", "齐己虚心听取意见、尊重有才学的人、追求诗句精炼。启示：学习和写作要虚心接受正确建议，精益求精。高分要结合“叩地膜拜”和“一字之师”。"],
+            ["对比阅读第 1 题", "威尼斯：许多孩子坐小艇到郊外；苏州：水城；乌篷船；船娘哼小调；船菜。评分看信息来源是否对应两篇文章。"],
+            ["对比阅读第 2 题", "都是动态描写。船夫写操纵自如、技术高超，可用轻松快活或较快节奏读；船娘写水巷清晨的宁静、舒缓和生活气息，可用平静舒缓读。"],
+            ["对比阅读第 3 题", "不恰当项 D。第一篇写威尼斯，不是江南水乡；第二篇写苏州水巷。D 把两篇都说成江南水乡，范围错配。"],
+            ["对比阅读第 4 题", "虽然许多河道填平了，但水巷生活、船声、石桥、灯笼和老苏州人的记忆仍在，水代表苏州的生活方式和文化精神，所以说苏州的魂从未真正离去。"]
+          ]
+        }
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const packId = params.get("pack") || "8";
+      const review = reviews[packId] || reviews[8];
+
+      document.title = `${review.title} · 助学者解读`;
+      document.querySelector("#pageKicker").textContent = review.kicker;
+      document.querySelector("#pageTitle").textContent = review.title;
+      document.querySelector("#pageSubtitle").textContent = review.subtitle;
+      document.querySelector("#axisSummary").textContent = review.axes;
+      document.querySelector("#sourceNote").textContent = review.note;
+      document.querySelector("#studentLink").href = `./fanrunran-reading-retro-student.html?pack=${packId}`;
+      document.querySelector("#sourceLink").href = review.source;
+
+      document.querySelector("#diagnosisList").innerHTML = review.diagnosis.map(([title, body]) => `
+        <section class="review-card">
+          <div class="review-head">
+            <h3>${title}</h3>
+            <span class="tag">${review.note}</span>
+          </div>
+          <p>${body}</p>
+        </section>
+      `).join("");
+
+      document.querySelector("#answerList").innerHTML = review.answers.map(([title, body]) => `
+        <section class="review-card">
+          <div class="review-head">
+            <h3>${title}</h3>
+            <span class="tag">${review.axes.split(" / ")[0]}</span>
+          </div>
+          <p>${body}</p>
+        </section>
+      `).join("");
+    </script>
+    <script src="./fanrunran-reading-page.js"></script>
+  </body>
+</html>

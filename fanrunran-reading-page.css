@@ -330,6 +330,15 @@ h3 {
   font-size: var(--reading-font-size);
 }
 
+.source-pre {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--reading-font-size);
+  line-height: 1.72;
+  white-space: pre-wrap;
+}
+
 .article h3 {
   margin: 24px 0 10px;
   color: var(--accent-strong);

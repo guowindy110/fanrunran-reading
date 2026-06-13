@@ -556,11 +556,11 @@
         <div class="status-row">
           <div class="metric">
             <span>已成题</span>
-            <strong id="doneCount">7</strong>
+            <strong id="doneCount">10</strong>
           </div>
           <div class="metric">
             <span>待素材</span>
-            <strong id="pendingCount">3</strong>
+            <strong id="pendingCount">0</strong>
           </div>
           <div class="metric">
             <span>总篇数</span>
@@ -587,7 +587,7 @@
           <div class="garden-path-head">
             <p class="kicker">10 天成长花园</p>
             <h2 id="gardenPathTitle">范润然的阅读成长路径</h2>
-            <p class="garden-path-sub">每完成一篇，就有一株能力植物开花；还没放素材的几天先埋着种子，等你来浇水。</p>
+            <p class="garden-path-sub">1-7 篇用于能力训练，8-10 篇用于期末回测；现在 10 个入口都已开放。</p>
             <div class="garden-progress" aria-hidden="true">
               <div class="garden-progress-fill" id="gardenProgressFill" style="width:0%"></div>
             </div>
@@ -602,7 +602,7 @@
               <h2 id="studentDirectoryTitle">直接进入做题页面</h2>
               <p class="current-meta">已成题篇目可直接跳转到左侧阅读材料、右侧题目的学生作答页。</p>
             </div>
-            <div class="current-meta">1-7 篇已开放｜8-10 篇待素材</div>
+            <div class="current-meta">1-10 篇已开放｜8-10 为期末回测</div>
           </div>
           <div class="directory-list" id="studentDirectory"></div>
         </section>
@@ -703,9 +703,36 @@
           reviewHref: "./fanrunran-reading-review-07-dashuhua.html",
           href: "./fanrunran-reading-output-07-dashuhua.md"
         },
-        { index: 8, status: "待素材", title: "第8篇", focus: "A3 非连续信息 / A6 互证", note: "优先选正文 + 表格/路线/规则材料。" },
-        { index: 9, status: "待素材", title: "第9篇", focus: "A4 情感变化 / A6 细节证据", note: "优先选成长或抒情散文，证据点要清楚。" },
-        { index: 10, status: "待素材", title: "第10篇", focus: "A4+A6+A7 综合复测", note: "用来观察能否减少支架、独立完成。" }
+        {
+          index: 8,
+          status: "已成题",
+          title: "回测卷一：《家书》",
+          focus: "A5 心理变化 / A6 细节证据 / A7 结尾选择",
+          note: "写人记事主战场回测。",
+          studentHref: "./fanrunran-reading-retro-student.html?pack=8",
+          reviewHref: "./fanrunran-reading-retro-review.html?pack=8",
+          href: "./fanrunran-reading-output-08-jiashu.md"
+        },
+        {
+          index: 9,
+          status: "已成题",
+          title: "回测卷二：《人民英雄纪念碑》",
+          focus: "A2 说明文读法 / A3 定位 / A6 说明证据",
+          note: "说明文与判断题排雷。",
+          studentHref: "./fanrunran-reading-retro-student.html?pack=9",
+          reviewHref: "./fanrunran-reading-retro-review.html?pack=9",
+          href: "./fanrunran-reading-output-09-monument.md"
+        },
+        {
+          index: 10,
+          status: "已成题",
+          title: "文体综合回测：《一字之师》+ 对比阅读",
+          focus: "A1 文言词义 / A2 文体读法 / A5 动静描写 / A6 对比证据",
+          note: "文言文与课内外对比合卷。",
+          studentHref: "./fanrunran-reading-retro-student.html?pack=10",
+          reviewHref: "./fanrunran-reading-retro-review.html?pack=10",
+          href: "./fanrunran-reading-output-10-literary-combo.md"
+        }
       ];
 
       const fallback = (slot) => `# 范润然自选素材第 ${slot.index} 篇阅读题：待素材
